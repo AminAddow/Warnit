@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import {BrowserRouter as Router, Route, Link, Redirect, withRouter} from "react-router-dom";
 // import "./stylesheet/App.css";
-import Workspace from './../workspace.js';
-import Login from './../login.js';
-import Home from './../home.js';
-import Omoss from './../omoss.js';
-import Dokumenter from './../dokumenter.js';
+import Workspace from './../workspace';
+import Login from './../login';
+import Home from './../home';
+import Omoss from './../omoss';
+import Dokumenter from './../dokumenter';
 // import AppAppBar from './components/shared/navigation/AppAppBar.js';
 
 
