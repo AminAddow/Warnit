@@ -50,7 +50,7 @@ loggingin(){
     };
 
 handleSubmit(event) {
-  alert('A name was submitted: ' + this.state.value);
+  alert('A name was submitted: ' + this.state.email);
   event.preventDefault();
 };
 
