@@ -14,11 +14,18 @@ import Muinavbar from './components/shared/navigation/mui-navbar';
 
 
 class App extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            authenticated: false
+        };
+
+    }
     render(){
         return (
             <Router>
                 <div>
-                    <Muinavbar />
+                    <Navbar authenticated={this.state.authenticated}/>
                     <Route exact path="/" component={Home} />
                     <Route path="/Omoss" component={Omoss} />
                     <Route path="/Workspace" component={Workspace} />
