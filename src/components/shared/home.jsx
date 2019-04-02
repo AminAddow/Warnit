@@ -13,9 +13,6 @@ class Home extends Component {
                 <Grid item >
                     <h1>Landing zone</h1>
                 </Grid>
-                <Grid item>
-                    <h1>Hvem er minos</h1>
-                </Grid>
             </Grid>
         </div>
         )
