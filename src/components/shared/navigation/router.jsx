@@ -1,13 +1,19 @@
 import React, { Component } from "react";
-import {BrowserRouter as Router, Route, Link, Redirect, withRouter} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect,
+  withRouter
+} from "react-router-dom";
 // import "./stylesheet/App.css";
-import Workspace from './../workspace';
-import Login from './../login';
-import Home from './../home';
-import Omoss from './../omoss';
-import Dokumenter from './../dokumenter';
+import Workspace from "./../workspace";
+import Login from "./../login";
+import Home from "./../home";
+import Omoss from "./../omoss";
+import Dokumenter from "./../dokumenter";
+import Questionset from "./../questioning";
 // import AppAppBar from './components/shared/navigation/AppAppBar.js';
-
 
 // Dette er router componentet. Denne er flyttet fra root (App.js) ettersom den ikke trenger å være der.
 // -----------------------------------------------------------------------------------------------------
@@ -30,34 +36,38 @@ import Dokumenter from './../dokumenter';
 //         });
 //     };
 
-function AppRouter(){
-    return (
-        <Router>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/workspace">Workspace</Link>
-                        </li>
-                        <li>
-                            <Link to="/omoss">Om oss</Link>
-                        </li>
-                        <li>
-                            <Link to="/dokumenter">Dokumenter</Link>
-                        </li>
-                    </ul>
-                </nav>
-                <Route path="/" exact component={Home} />
-                <Route path="/workspace" exact component={Workspace} />
-                <Route path="/authentication" exact component={Login} />
-                <Route path="/omoss"exact component={Omoss} />
-                <Route path="/dokumenter" exact component={Dokumenter} />
-            </div>
-        </Router>
-    )
+function AppRouter() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/workspace">Workspace</Link>
+            </li>
+            <li>
+              <Link to="/omoss">Om oss</Link>
+            </li>
+            <li>
+              <Link to="/dokumenter">Dokumenter</Link>
+            </li>
+            <li>
+              <Link to="/questioning">Spørsmålssett</Link>
+            </li>
+          </ul>
+        </nav>
+        <Route path="/" exact component={Home} />
+        <Route path="/workspace" exact component={Workspace} />
+        <Route path="/authentication" exact component={Login} />
+        <Route path="/omoss" exact component={Omoss} />
+        <Route path="/dokumenter" exact component={Dokumenter} />
+        <Route path="/questioning" exact component={Questionset} />
+      </div>
+    </Router>
+  );
 }
 
 // function PrivateRoute( {component: Component, ...rest }){
@@ -71,7 +81,5 @@ function AppRouter(){
 //                         }}
 //         )}
 //     )}
-
-
 
 export default AppRouter;
