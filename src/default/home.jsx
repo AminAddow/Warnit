@@ -2,7 +2,7 @@ import React, { Component } from "react";
 //import { Link } from 'react-router-dom';
 import Grid from "@material-ui/core/Grid";
 //import Paper from '@material-ui/core/Paper';
-import "./../../stylesheet/home.css";
+import "./../stylesheet/home.css";
 
 class Home extends Component {
   render() {

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./stylesheet/App.css";
-import Workspace from "./components/shared/workspace";
-import Login from "./components/shared/login";
-import Home from "./components/shared/home";
-import Omoss from "./components/shared/omoss";
-import Dokumenter from "./components/shared/dokumenter";
-import Questionset from "./components/questioning";
+import Workspace from "./default/workspace";
+import Login from "./default/login";
+import Home from "./default/home";
+import Omoss from "./default/omoss";
+import Dokumenter from "./default/dokumenter";
+import Questionset from "./default/questioning";
 //import Navbar from "./components/shared/navigation/CustomNavbar";
-import Muinavbar from "./components/shared/navigation/mui-navbar";
+import Muinavbar from "./default/navigation/mui-navbar";
 
 // Her kaller vi på Router som er i './components/shared/navigation/router'.
 

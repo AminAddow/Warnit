@@ -9,12 +9,12 @@ import Divider from "@material-ui/core/Divider";
 import Modal from "@material-ui/core/Modal";
 import axios from "axios";
 // functional components
-import ProgressBar from "./progressbar";
-import Question from "./question";
-import AnswerOption from "./normalansweroption";
-import SliderOption from "./themeansweroption";
-import Loader from "./loader";
-import ResultTable from "./resulttable";
+import ProgressBar from "./views/progressbar";
+import Question from "./views/question";
+import AnswerOption from "./views/normalansweroption";
+import SliderOption from "./views/themeansweroption";
+import Loader from "./views/loader";
+import ResultTable from "./views/resulttable";
 
 const styles = theme => ({
   root: {
