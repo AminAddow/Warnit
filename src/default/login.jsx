@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import "./../../stylesheet/App.css";
-import firebase from "./../../firebase";
+import firebase from "./../firebase";
 import LoginUser from "./views/loginUser";
 import Loginui from "./views/loginui";
 

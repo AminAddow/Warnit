@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import "./stylesheet/App.css";
-import Workspace from './components/shared/workspace';
-import Login from './components/shared/login';
-import Home from './components/shared/home';
-import Omoss from './components/shared/omoss';
-import Dokumenter from './components/shared/dokumenter';
-import Navbar from './components/shared/navigation/CustomNavbar';
-import Muinavbar from './components/shared/navigation/mui-navbar';
+import Workspace from './default/workspace';
+import Login from './default/login';
+import Home from './default/home';
+import Omoss from './default/omoss';
+import Dokumenter from './default/dokumenter';
+import Navbar from './default/navigation/CustomNavbar';
+import Muinavbar from './default/navigation/mui-navbar';
 import firebase from "./firebase";
 
 

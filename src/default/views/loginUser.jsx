@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import "./../../stylesheet/App.css";
-import firebase from "./../../../firebase";
+import firebase from "./../../firebase";
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';

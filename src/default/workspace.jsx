@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import AppAppBar from './navigation/AppAppBar';
-import firebase from "./../../firebase";
+import firebase from "./../firebase";
 import WorkspaceName from "./views/WorkspaceName";
 import WorkspaceBoard from "./views/WorkspaceBoard";
 import MyCases from "./views/myCases";

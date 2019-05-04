@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import "./../../stylesheet/App.css";
-import firebase from "./../../../firebase";
+import firebase from "./../../firebase";
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
