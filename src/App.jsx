@@ -47,7 +47,7 @@ class App extends Component {
                     <Navbar user={this.state.user} authenticated={this.state.authenticated}/>
                     <Route exact path="/" component={Home} />
                     <Route path="/Omoss" component={Omoss} />
-                    <Route path="/Workspace" component={Workspace} />
+                    <Route user={this.state.user} authenticated={this.state.authenticated} path="/Workspace" component={Workspace} />
                     <Route path="/Dokumenter" component={Dokumenter} />
                     <Route path="/Login" component={Login} />
                 </div>

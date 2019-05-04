@@ -31,7 +31,7 @@ const styles = theme =>  ({
 });
 
 
-function ButtonAppBar(props) {
+function Navbar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
@@ -40,20 +40,22 @@ function ButtonAppBar(props) {
             <Typography component={Link} to="/" variant="h4" size="Large" color="inherit" className="classes.button">
                 Warnit
             </Typography>
-          <div className={classes.button}>
-              <Button className={classes.button}  component={Link} size="small" to="/Workspace" color="inherit">Workspace</Button>
-              <Button className={classes.button}  component={Link} size="small" to="/Dokumenter" color="inherit">Dokumenter</Button>
-              <Button className={classes.button}  component={Link} size="small" to="/Omoss" color="inherit">Omoss</Button>
-          </div>
-            <Button component={Link} to="/Login" color="inherit">Login</Button>
+            {/* {this.props.authenticated ? (
+                  <Button className={classes.button}  component={Link} size="small" to="/Workspace" color="inherit">Workspace</Button>
+              ) : (
+                  <div></div>
+              )} */}
+                  <Button className={classes.button}  component={Link} size="small" to="/Dokumenter" color="inherit">Dokumenter</Button>
+                  <Button className={classes.button}  component={Link} size="small" to="/Omoss" color="inherit">Omoss</Button>
+                  <Button component={Link} to="/Login" color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
 
-ButtonAppBar.propTypes = {
+Navbar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ButtonAppBar);
+export default withStyles(styles)(Navbar);

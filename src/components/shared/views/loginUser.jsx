@@ -16,7 +16,8 @@ class LoginUser extends Component {
       super(props);
       this.state = {email: '',
                     pass:'',
-                    redirect: false
+                    redirect: false,
+                    authenticated: false
                 };
       this.handleChange = this.handleChange.bind(this);
       // this.handleSubmit = this.handleSubmit.bind(this);
@@ -46,7 +47,9 @@ authWithEmailPassword(event){
 
       auth.onAuthStateChanged(user => {
           if (user) {
-              this.setState({redirect: true})
+              this.setState({
+                  redirect: true,
+              })
             // User is signed in.
             console.log("Bruker er logget på.");
             // User is signed in.
