@@ -112,7 +112,7 @@ class Questionset extends Component {
     });
     // the content of event.currentTarget.id = ("typeOfQuestion", "inputvalue"), this needs to be split up
     let data = event.currentTarget.id.split(",");
-    let type = data[0];
+    //let type = data[0];
     let questionValue = data[1];
     /*console.log(
       "The value of the Q: " + questionValue + " And the type of the Q: " + type
@@ -163,7 +163,7 @@ class Questionset extends Component {
   };
 
   contentThemeQuestion = () => {
-    const { completedSteps, content, currentQuestion } = this.state;
+    const { completedSteps, content } = this.state;
     return (
       <div>
         <Question content={content[completedSteps.length].ThemeQuestion} />
@@ -182,12 +182,7 @@ class Questionset extends Component {
     const {
       modalOpen,
       activeStep,
-      completedSteps,
-      completedQuestions,
       completedThemeQuestion,
-      content,
-      currentQuestion,
-      currentQuestionSetLength,
       themes,
       isLoaded
     } = this.state;

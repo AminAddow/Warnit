@@ -5,23 +5,27 @@ class Omoss extends Component {
   render() {
     return (
       <div>
-        <Typography variant="h1">Om Warnit</Typography>
-        <p>
+        <Typography variant="h3">Om Warnit</Typography>
+        <Typography variant="body1">
           {" "}
           Warnit er for deg som ønsker å melde, få råd eller kunnskap om
           radikalisering og voldelig ekstremisme. Siden kan være nyttig for
           eksempel for ansatte i kommuner, skoler, barnevern eller politi, eller
           for andre som jobber med ungdom, foreldre og de unge selv.
-        </p>
+        </Typography>
+
+        <Typography variant="h5">Ønsker du å </Typography>
         <Typography variant="body1">
-          <h2>Ønsker du å </h2>
-          <p>
-            {" "}
-            ✓ Kartlegge, analysere og dokumentere din bekymring i ett system{" "}
-          </p>
-          <p> ✓ Fokusere på kompetanseheving</p>
-          <p> ✓ Få bekreftet din bekymring knyttet til voksne og unge</p>
-          <p>✓ Få støtte i arbeidet for bedre samarbeid</p>
+          {" "}
+          ✓ Kartlegge, analysere og dokumentere din bekymring i ett system{" "}
+        </Typography>
+        <Typography variant="body1"> ✓ Fokusere på kompetanseheving</Typography>
+        <Typography variant="body1">
+          {" "}
+          ✓ Få bekreftet din bekymring knyttet til voksne og unge
+        </Typography>
+        <Typography variant="body1">
+          ✓ Få støtte i arbeidet for bedre samarbeid
         </Typography>
       </div>
     );
