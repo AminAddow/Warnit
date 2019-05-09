@@ -33,7 +33,7 @@ const styles = theme => ({
 const InfoCard =(props) => {
     const { classes } = props;
         return(
-            <Grid sm={6} container direction="row" justify="center" alignItems="center" className={classes.infocard} style={{border: '3px solid blue'}}>
+            <Grid  container direction="row" justify="center" alignItems="center" className={classes.infocard} style={{border: '3px solid blue'}}>
                 
                     <Grid sm={2} xs={6} container item className={classes.paperGrid} wrap="nowrap">
                         <Paper elevation={2} className={classes.paper}>
