@@ -1,18 +1,29 @@
 import React, { Component } from "react";
 import { Typography } from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
 
 class Omoss extends Component {
   render() {
     return (
       <div>
-        <Typography variant="h1">Om Warnit</Typography>
-        <p>
-          {" "}
-          Warnit er for deg som ønsker å melde, få råd eller kunnskap om
-          radikalisering og voldelig ekstremisme. Siden kan være nyttig for
-          eksempel for ansatte i kommuner, skoler, barnevern eller politi, eller
-          for andre som jobber med ungdom, foreldre og de unge selv.
-        </p>
+      <Grid item xs={12} style={{ padding: 100 }}>
+      <Typography variant="h1">Om Warnit</Typography>
+      <p>
+        {" "}
+        Warnit er for deg som ønsker å melde, få råd eller kunnskap om
+        radikalisering og voldelig ekstremisme. Siden kan være nyttig for
+        eksempel for ansatte i kommuner, skoler, barnevern eller politi, eller
+        for andre som jobber med ungdom, foreldre og de unge selv.
+      </p>
+      </Grid>
+      //  <Typography variant="h1">Om Warnit</Typography>
+      //   <p>
+      //     {" "}
+      //     Warnit er for deg som ønsker å melde, få råd eller kunnskap om
+      //     radikalisering og voldelig ekstremisme. Siden kan være nyttig for
+      //     eksempel for ansatte i kommuner, skoler, barnevern eller politi, eller
+      //     for andre som jobber med ungdom, foreldre og de unge selv.
+      // //  </p>
         <Typography variant="body1">
           <h2>Ønsker du å </h2>
           <p>
