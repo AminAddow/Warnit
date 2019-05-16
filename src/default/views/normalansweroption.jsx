@@ -12,13 +12,13 @@ const AnswerOption = props => {
   return (
     <List xs={4} component="nav">
       <ListItem button onClick={props.onSubmit} id={["normal", 1]}>
-        <ListItemText inset primary="Yes" />
+        <ListItemText inset primary="Ja" />
       </ListItem>
       <ListItem button onClick={props.onSubmit} id={["normal", -1]}>
-        <ListItemText inset primary="No" />
+        <ListItemText inset primary="Nei" />
       </ListItem>
       <ListItem button onClick={props.onSubmit} id={["normal", 0]}>
-        <ListItemText inset primary="I don't know" />
+        <ListItemText inset primary="Vet ikke" />
       </ListItem>
     </List>
   );

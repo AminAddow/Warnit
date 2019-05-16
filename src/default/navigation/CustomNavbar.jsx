@@ -36,6 +36,10 @@ export default class CustomNavbar extends Component {
                   Spørsmålssett
                 </NavItem>
               </Link>
+              <Link to="/AdminPage">
+                <NavItem className="navbar-text nav-link">Admin</NavItem>
+              </Link>
+
               {this.props.authenticated ? (
                 // <div className="justify-content-end"><p>User is logged in</p></div>
                 <NavItem

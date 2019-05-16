@@ -36,7 +36,6 @@ class ResultTable extends Component {
       let questionType = data[0];
       let questionValue = parseInt(data[1], 10); // parsing the value of the input given to a number
       //console.log("VALLL " + typeof questionValue);
-
       //calculate possible score by looking at what type of input was sent to this class and determine the possible score
       questionType === "theme" && questionValue > 0
         ? (possibleScore = [+possibleScore + 10])
@@ -48,7 +47,7 @@ class ResultTable extends Component {
     let userPercentage = (myScore / possibleScore).toFixed(2) * 100;
 
     // need a some type of list of actions for the user to make, can make use of a switch case here
-    console.log("UP --->" + userPercentage);
+    //console.log("UP --->" + userPercentage);
 
     /* currently this calculation is very simple only looks at a high level, 
     should implement finding score depending on precentage of theme and not of total*/
@@ -86,15 +85,13 @@ class ResultTable extends Component {
         break;
     }
 
-    return (
-      this.setState({
-        advicedCourseOfAction: advicedCourseOfAction,
-        colorCode: colorCode,
-        isLoaded: true
-      }),
-      console.log("myScore --> " + myScore),
-      console.log("possScore --> " + possibleScore)
-    );
+    return this.setState({
+      advicedCourseOfAction: advicedCourseOfAction,
+      colorCode: colorCode,
+      isLoaded: true
+    });
+    // console.log("myScore --> " + myScore),
+    //console.log("possScore --> " + possibleScore)
     /* based off the precentage found by doing totalScore/possiblescore we show what grade 
     it was given and actions the person needs to take*/
   }
@@ -106,9 +103,9 @@ class ResultTable extends Component {
     let type = data[0]; // type of question
     let questionValue = data[1]; // value
 
-    console.log(
+    /*console.log(
       "The value of the Q: " + questionValue + " And the type of the Q: " + type
-    );
+    );*/
     return (
       <TableRow>
         <TableCell>SPØRSMÅLTYPE: {type}</TableCell>

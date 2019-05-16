@@ -11,15 +11,16 @@ const styles = theme => ({
     width: "80%",
     height: "auto",
     padding: 10,
-    margin: "10%",
+    margin: "5% auto",
     overflow: "hidden"
   },
   button: {
     margin: theme.spacing.unit
   },
   slider: {
-    height: 100,
-    marginTop: 10
+    height: "fit-content",
+    width: "100%",
+    margin: "0 auto"
   },
   track: {
     height: 20,
@@ -63,7 +64,7 @@ class SliderOption extends Component {
         spacing={24}
         className={classes.root}
       >
-        <Grid item xs={12}>
+        <Grid item xs={12} className={classes.slider}>
           <Slider
             classes={{
               track: classes.track,
