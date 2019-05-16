@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./stylesheet/App.css";
 import Workspace from "./default/workspace";
 import Login from "./default/login";
@@ -9,7 +9,9 @@ import Dokumenter from "./default/dokumenter";
 import Navbar from "./default/navigation/CustomNavbar";
 import Muinavbar from "./default/navigation/mui-navbar";
 import firebase from "./firebase";
+import NoMatch from "./default/404";
 import Questionset from "./default/questioning";
+import Footer from "./default/footer/main-footer";
 
 // Her kaller vi på Router som er i './components/shared/navigation/router'.
 
@@ -33,7 +35,7 @@ class App extends Component {
       } else {
         this.setState({
           authenticated: false
-        });
+      });
       }
     });
   }
@@ -46,17 +48,21 @@ class App extends Component {
             user={this.state.user}
             authenticated={this.state.authenticated}
           />
-          <Route exact path="/" component={Home} />
-          <Route path="/Omoss" component={Omoss} />
-          <Route
-            user={this.state.user}
-            authenticated={this.state.authenticated}
-            path="/Workspace"
-            component={Workspace}
-          />
-          <Route path="/Dokumenter" component={Dokumenter} />
-          <Route path="/Questionset" component={Questionset} />
-          <Route path="/Login" component={Login} />
+          <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/Omoss" component={Omoss} />
+              <Route
+                user={this.state.user}
+                authenticated={this.state.authenticated}
+                path="/Workspace"
+                component={Workspace}
+              />
+              <Route path="/Dokumenter" component={Dokumenter} />
+              <Route path="/Questionset" component={Questionset} />
+              <Route path="/Login" component={Login} />
+              <Route component={NoMatch} />
+          </Switch>
+          <Footer />
         </div>
       </Router>
     );
