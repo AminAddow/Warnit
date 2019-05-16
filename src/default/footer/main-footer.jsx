@@ -58,14 +58,19 @@ function Footer(props) {
           </Typography>
         </Grid>
         <Grid item sm={6} xs={12} spacing={16} className={classes.item}>
-          <Typography>
-            Markensgate 8 Tlf: 407 01 100 / post@minos.no / minos.no
+          <Typography variant="body2">
+            Markensgate 8<br />
+            Tlf: 407 01 100
+            <br /> post@minos.no
+            <br /> <a href="https://www.minos.no/">minos.no</a>
           </Typography>
         </Grid>
       </Grid>
       <Grid container className={classes.bottom}>
         <Grid item xs={12} className={classes.item}>
-          <Typography className={classes.copyright}>2019 © Minos</Typography>
+          <Typography variant="body2" className={classes.copyright}>
+            2019 © Minos
+          </Typography>
         </Grid>
       </Grid>
     </div>
