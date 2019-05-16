@@ -27,10 +27,7 @@ function Buttons(props) {
           Ønsker du å svare på spørsmålskjema? 
         
       </Fab>
-      <div>
-        <p>hello, this is updated AGAINN!!!</p>
-        <h1>YEET</h1>
-      </div>
+
       </div>
   
     

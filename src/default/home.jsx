@@ -7,6 +7,7 @@ import './../stylesheet/home.css';
 import InfoCard from './views/InfoCard';
 import Banner from './views/Banner';
 import Buttons from './views/Buttons';
+import TextCard from './views/TextCard'
 //import { Button } from "@material-ui/core";
 
 
@@ -19,7 +20,8 @@ class Home extends Component {
                 <Grid item xs={12} style={{border: '3px solid red'}}>
                    
                     <Banner ><Buttons/></Banner>
-                    <InfoCard/>
+                    <TextCard />
+                    <InfoCard />
                 </Grid>
             </Grid>
         </div>

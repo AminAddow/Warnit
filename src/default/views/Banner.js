@@ -1,13 +1,18 @@
 import React from 'react';
-import Bannerpic from './images/banner2.jpg';
+import Bannerpic from './images/banner3.jpg';
 import Grid from '@material-ui/core/Grid';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 
 const bannerStyle ={
     width: "100%",
-    height: "100vh",
+    height: "80vh",
     backgroundImage: `url(${Bannerpic})`,
-    border: '3px solid black'
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    border: '3px solid black',
+    
 }
 const Banner = (props) => {
     return (
