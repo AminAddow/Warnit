@@ -56,7 +56,7 @@ const InfoCard = props => {
             style={{ border: "3px solid blue" }}
           >
             <Grid container item style={{ border: "3px solid blue" }}>
-              <UndrawCoding height="100" />
+              <UndrawCoding />
             </Grid>
             <Typography variant="h4">Box 1</Typography>
             <Typography variant="body1">
@@ -86,7 +86,7 @@ const InfoCard = props => {
             style={{ border: "3px solid blue" }}
           >
             <Grid container item style={{ border: "3px solid blue" }}>
-              <UndrawCoding height={100} />
+              <UndrawCoding />
             </Grid>
             <Typography variant="h4">Box 2</Typography>
             <Typography variant="body1">
@@ -116,7 +116,7 @@ const InfoCard = props => {
             style={{ border: "3px solid blue" }}
           >
             <Grid container item style={{ border: "3px solid blue" }}>
-              <UndrawCoding height={100} />
+              <UndrawCoding />
             </Grid>
             <Typography variant="h4">Box 3</Typography>
             <Typography variant="body1">
