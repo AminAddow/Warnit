@@ -17,7 +17,7 @@ export default class CustomNavbar extends Component {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav ">
-            <Nav pullRight className="">
+            <Nav pullright="true" className="">
               {this.props.authenticated ? (
                 <Link to="/Workspace">
                   <NavItem className="navbar-text nav-link">Workspace</NavItem>
