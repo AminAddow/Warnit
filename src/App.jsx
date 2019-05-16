@@ -25,7 +25,7 @@ const styles = () => ({
   },
   body: {
     position: "relative",
-    minHeight: "calc(100vh - 250px)",
+    minHeight: "calc(100vh - 256px)",
     height: "100%"
   },
   footer: {
