@@ -7,6 +7,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { ReactComponent as Logo } from './images/community.svg';
 
+import { UndrawCoding } from 'react-undraw';
+
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -35,36 +37,46 @@ const InfoCard =(props) => {
         return(
             <Grid  container direction="row" justify="center" alignItems="center" className={classes.infocard} style={{border: '3px solid blue'}}>
                 
-                    <Grid sm={2} xs={11} container item className={classes.paperGrid} wrap="nowrap">
-                        <Paper elevation={2} className={classes.paper}>
-                        <Grid container item justify="center" alignItems="center">
-                           
-                        </Grid>
-                        <Typography variant="h2">Box 1</Typography>
-                        </Paper>
-                    </Grid>
-
-                    <Grid sm={2} xs={11} container item className={classes.paperGrid} wrap="nowrap">
+                <Grid sm={5} xs={11} md={3} container item className={classes.paperGrid} wrap="nowrap">
                         <Paper elevation={2} className={classes.paper}>
                         
                         <Grid container item justify="center" style={{border: '3px solid blue'}}>
-                        <Grid container item xs={1} alignItems="baseline" style={{border: '3px solid blue'}}>
-                       
+                        <Grid container item  style={{border: '3px solid blue'}}>
+                       <UndrawCoding height={100}/>
                         </Grid>
-                        <Typography variant="h2">Box 2</Typography>
-                        <Typography variant="p">Føler du at personen er radikalisert?  </Typography>
+                        <Typography variant="h4">Box 1</Typography>
+                        <Typography variant="p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </Typography>
                         </Grid>
                         </Paper>
                     </Grid>
 
-                    <Grid sm={2} xs={11} container item className={classes.paperGrid} wrap="nowrap">
+
+                    <Grid sm={5} xs={11} md={3} container item className={classes.paperGrid} wrap="nowrap">
                         <Paper elevation={2} className={classes.paper}>
-                        <Grid container item justify="center" alignItems="center">
-                           
+                        
+                        <Grid container item justify="center" style={{border: '3px solid blue'}}>
+                        <Grid container item  style={{border: '3px solid blue'}}>
+                       <UndrawCoding height={100}/>
                         </Grid>
-                        <Typography variant="h2">Box 3</Typography>
+                        <Typography variant="h4">Box 2</Typography>
+                        <Typography variant="p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </Typography>
+                        </Grid>
                         </Paper>
                     </Grid>
+
+                    <Grid sm={8} xs={11} md={3} container item className={classes.paperGrid} wrap="nowrap">
+                        <Paper elevation={2} className={classes.paper}>
+                        
+                        <Grid container item justify="center" style={{border: '3px solid blue'}}>
+                        <Grid container item  style={{border: '3px solid blue'}}>
+                       <UndrawCoding height={100}/>
+                        </Grid>
+                        <Typography variant="h4">Box 3</Typography>
+                        <Typography variant="p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </Typography>
+                        </Grid>
+                        </Paper>
+                    </Grid>
+
              
             </Grid>
         );
