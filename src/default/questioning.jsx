@@ -4,9 +4,7 @@ import Button from "@material-ui/core/Button";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
-import Modal from "@material-ui/core/Modal";
 import axios from "axios";
 // functional components
 import ProgressBar from "./views/progressbar";
@@ -15,16 +13,15 @@ import AnswerOption from "./views/normalansweroption";
 import SliderOption from "./views/themeansweroption";
 import Loader from "./views/loader";
 import ResultTable from "./views/resulttable";
+import Popup from "./../admin/views/popup";
 
 const styles = theme => ({
   root: {
-    width: "80%"
+    width: "100vw"
   },
   paper: {
-    position: "absolute",
-    top: "10%",
-    left: "10%",
-    width: "80%",
+    margin: "10% auto",
+    width: "94%",
     minHeight: "20%",
     maxHeight: "80%",
     overflow: "auto",
@@ -112,7 +109,7 @@ class Questionset extends Component {
     });
     // the content of event.currentTarget.id = ("typeOfQuestion", "inputvalue"), this needs to be split up
     let data = event.currentTarget.id.split(",");
-    let type = data[0];
+    //let type = data[0];
     let questionValue = data[1];
     /*console.log(
       "The value of the Q: " + questionValue + " And the type of the Q: " + type
@@ -163,7 +160,7 @@ class Questionset extends Component {
   };
 
   contentThemeQuestion = () => {
-    const { completedSteps, content, currentQuestion } = this.state;
+    const { completedSteps, content } = this.state;
     return (
       <div>
         <Question content={content[completedSteps.length].ThemeQuestion} />
@@ -182,12 +179,7 @@ class Questionset extends Component {
     const {
       modalOpen,
       activeStep,
-      completedSteps,
-      completedQuestions,
       completedThemeQuestion,
-      content,
-      currentQuestion,
-      currentQuestionSetLength,
       themes,
       isLoaded
     } = this.state;
@@ -206,25 +198,27 @@ class Questionset extends Component {
               </Button>
             </Grid>
             <Grid item>
-              <Modal open={modalOpen} onClose={this.handleClose}>
-                <Paper className={classes.paper} elevation={1}>
-                  <ProgressBar themes={themes} activeStep={activeStep} />
-                  <Divider variant="middle" />
-                  {// if there is no data registered, we display first theme question
-                  !completedThemeQuestion && activeStep + 1 < themes.length ? (
-                    this.contentThemeQuestion()
-                  ) : activeStep + 1 < themes.length ? (
-                    /* need the user to answer theme question before moving on to contentQuestions*/
+              <Popup
+                modalOpen={modalOpen}
+                modalClose={this.handleClose}
+                classPaper={classes.paper}
+              >
+                <ProgressBar themes={themes} activeStep={activeStep} />
+                <Divider variant="middle" />
+                {// if there is no data registered, we display first theme question
+                !completedThemeQuestion && activeStep + 1 < themes.length ? (
+                  this.contentThemeQuestion()
+                ) : activeStep + 1 < themes.length ? (
+                  /* need the user to answer theme question before moving on to contentQuestions*/
 
-                    this.contentQuestion()
-                  ) : (
-                    <ResultTable
-                      answersSubmitted={this.state.completedQuestions}
-                    />
-                  )}
-                  <Divider variant="middle" />
-                </Paper>
-              </Modal>
+                  this.contentQuestion()
+                ) : (
+                  <ResultTable
+                    answersSubmitted={this.state.completedQuestions}
+                  />
+                )}
+                <Divider variant="middle" />
+              </Popup>
             </Grid>
           </div>
         ) : (

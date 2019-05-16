@@ -7,9 +7,9 @@ import Home from "./default/home";
 import Omoss from "./default/omoss";
 import Dokumenter from "./default/dokumenter";
 import Navbar from "./default/navigation/CustomNavbar";
-import Muinavbar from "./default/navigation/mui-navbar";
 import firebase from "./firebase";
 import Questionset from "./default/questioning";
+import AdminPage from "./admin/adminpage";
 
 // Her kaller vi på Router som er i './components/shared/navigation/router'.
 
@@ -56,6 +56,7 @@ class App extends Component {
           />
           <Route path="/Dokumenter" component={Dokumenter} />
           <Route path="/Questionset" component={Questionset} />
+          <Route path="/AdminPage" component={AdminPage} />
           <Route path="/Login" component={Login} />
         </div>
       </Router>
