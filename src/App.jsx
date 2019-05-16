@@ -88,8 +88,8 @@ class App extends Component {
               </Switch>
             </Grid>
           </Router>
-          <Grid container item xs={12} className={classes.footer}>
-            <Footer />
+          <Grid item xs={12}>
+            <Footer className={classes.footer} />
           </Grid>
         </Grid>
       </div>
