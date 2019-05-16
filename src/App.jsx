@@ -20,15 +20,15 @@ import PropTypes from "prop-types";
 const styles = () => ({
   container: {
     minHeight: "100%",
-    position: "relative"
+    position: "relative",
+    marginBottom: 0
   },
   body: {
     position: "relative",
-    minHeight: "calc(100vh - 225px)",
-    height: "99%"
+    minHeight: "calc(100vh - 250px)",
+    height: "100%"
   },
   footer: {
-    height: 200,
     width: "100vw",
     bottom: 0
   }
@@ -62,7 +62,7 @@ class App extends Component {
     const { classes } = this.props;
     return (
       <div>
-        <Grid container xs={12} className={classes.container}>
+        <Grid container item xs={12} className={classes.container}>
           <Router>
             <Grid item xs={12}>
               <Navbar
