@@ -29,7 +29,7 @@ const Invite = props => {
           </Grid>
           <Grid container item xs={12} justify="center">
             <a href="mailto:test?cc=person2&amp;subject=Invitasjon til å bli en del av Warnit.no&amp;body=Link to the registration page with valid code">
-              <Button variant="contained" color="primary" fullWidth>
+              <Button variant="contained" color="secondary" fullWidth>
                 Send
               </Button>
             </a>

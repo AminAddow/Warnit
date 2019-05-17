@@ -6,12 +6,12 @@ import {
   Typography,
   Grid,
   Divider,
-  Button,
-  Table,
+  Button
+  /* Table,
   TableHead,
   TableCell,
   TableBody,
-  TableRow
+  TableRow*/
 } from "@material-ui/core";
 import Invite from "./views/invite";
 import EditQuestionset from "./views/editequestionset";
@@ -26,7 +26,7 @@ const styles = theme => ({
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
     left: "5",
-    margin: "auto",
+    margin: "10 auto",
     width: "90%"
   },
   paper: {
@@ -40,10 +40,12 @@ const styles = theme => ({
     outline: "none"
   },
   questionpaper: {
-    width: "98vw",
-    margin: "15vh auto",
+    minWidth: 400,
+    maxWidth: 800,
+    margin: "10vh auto",
     minHeight: "20vh",
-    maxHeight: "70vh"
+    maxHeight: "70vh",
+    overflow: "auto"
   },
   gridCon: {
     margin: "0 auto",
@@ -69,7 +71,7 @@ const styles = theme => ({
 class AdminPage extends Component {
   state = {
     inviteModalOpen: false,
-    editModalOpen: false
+    editModalOpen: true
   };
 
   // modal functions for invite
@@ -155,6 +157,7 @@ class AdminPage extends Component {
             />
           </Paper>
         </Grid>
+        {/*
         <Grid item xs={12}>
           <Paper className={classes.root}>
             <Typography variant="headline">
@@ -181,6 +184,7 @@ class AdminPage extends Component {
             </Table>
           </Paper>
         </Grid>
+       */}
       </Grid>
     );
   }

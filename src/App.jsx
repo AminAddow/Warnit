@@ -9,7 +9,6 @@ import Dokumenter from "./default/dokumenter";
 import Navbar from "./default/navigation/CustomNavbar";
 import firebase from "./firebase";
 import NoMatch from "./default/404";
-import Questionset from "./default/questioning";
 import Footer from "./default/footer/main-footer";
 import AdminPage from "./admin/adminpage";
 import { Grid } from "@material-ui/core";
