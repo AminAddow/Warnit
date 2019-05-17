@@ -81,7 +81,6 @@ class App extends Component {
                   component={Workspace}
                 />
                 <Route path="/Dokumenter" component={Dokumenter} />
-                <Route path="/Questionset" component={Questionset} />
                 <Route path="/AdminPage" component={AdminPage} />
                 <Route path="/Login" component={Login} />
                 <Route component={NoMatch} />

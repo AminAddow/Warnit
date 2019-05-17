@@ -32,11 +32,6 @@ export default class CustomNavbar extends Component {
               <Link to="/Omoss">
                 <NavItem className="navbar-text nav-link">Om Oss</NavItem>
               </Link>
-              <Link to="/Questionset">
-                <NavItem className="navbar-text nav-link">
-                  Spørsmålssett
-                </NavItem>
-              </Link>
               <Link to="/AdminPage">
                 <NavItem className="navbar-text nav-link">Admin</NavItem>
               </Link>

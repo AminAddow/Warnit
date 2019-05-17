@@ -19,15 +19,13 @@ const styles = theme => ({
 });
 
 const Loader = props => {
-  const { modalOpen, classes } = props;
+  const { classes } = props;
   return (
-    <Modal open={modalOpen}>
-      <Paper className={classes.paper}>
-        <Grid container justify="center">
-          <CircularProgress disableShrink />
-        </Grid>
-      </Paper>
-    </Modal>
+    <Paper className={classes.paper}>
+      <Grid container justify="center">
+        <CircularProgress disableShrink />
+      </Grid>
+    </Paper>
   );
 };
 
