@@ -7,7 +7,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { ReactComponent as Logo } from "./images/community.svg";
 
-import { UndrawCoding } from "react-undraw";
+import { UndrawConnectedWorld, UndrawCommunity , UndrawTrueFriends} from "react-undraw";
 
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -17,10 +17,10 @@ import CardMedia from "@material-ui/core/CardMedia";
 
 const styles = theme => ({
   infocard: {
-    marginTop: "10px"
+    marginTop: "15px"
   },
   paperGrid: {
-    margin: theme.spacing.unit * 2
+    margin: theme.spacing.unit * 2,
     /*padding: theme.spacing.unit */
   },
   paper: {
@@ -37,8 +37,10 @@ const InfoCard = props => {
       justify="center"
       alignItems="center"
       className={classes.infocard}
-      style={{ border: "3px solid blue" }}
+      background-color="#FFF07C"
+
     >
+    
       <Grid
         sm={5}
         xs={11}
@@ -53,12 +55,12 @@ const InfoCard = props => {
             container
             item
             justify="center"
-            style={{ border: "3px solid blue" }}
+            
           >
-            <Grid container item style={{ border: "3px solid blue" }}>
-              <UndrawCoding />
+            <Grid container >
+              <UndrawCommunity primaryColor="#97EAD2" height="175px" />
             </Grid>
-            <Typography variant="h4">Box 1</Typography>
+            <Typography variant="h4">Samfunn</Typography>
             <Typography variant="body1">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -83,12 +85,11 @@ const InfoCard = props => {
             container
             item
             justify="center"
-            style={{ border: "3px solid blue" }}
           >
-            <Grid container item style={{ border: "3px solid blue" }}>
-              <UndrawCoding />
+            <Grid container item >
+              <UndrawConnectedWorld primaryColor="#5DD39E" height="175px" />
             </Grid>
-            <Typography variant="h4">Box 2</Typography>
+            <Typography variant="h4">Verden</Typography>
             <Typography variant="body1">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -113,12 +114,12 @@ const InfoCard = props => {
             container
             item
             justify="center"
-            style={{ border: "3px solid blue" }}
+            
           >
-            <Grid container item style={{ border: "3px solid blue" }}>
-              <UndrawCoding />
+            <Grid container item >
+              <UndrawTrueFriends primaryColor="#97EAD2" height="175px" />
             </Grid>
-            <Typography variant="h4">Box 3</Typography>
+            <Typography variant="h4">Barndom</Typography>
             <Typography variant="body1">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

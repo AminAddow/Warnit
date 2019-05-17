@@ -32,9 +32,9 @@ class Home extends Component {
           container
           justify="center"
           alignItems="center"
-          style={{ border: "3px solid blue" }}
+          
         >
-          <Grid item xs={12} style={{ border: "3px solid red" }}>
+          <Grid item xs={12} >
             <Banner>
               <Buttons
                 handleModalOpen={this.handleModalOpen}

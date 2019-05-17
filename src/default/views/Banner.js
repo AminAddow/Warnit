@@ -1,24 +1,27 @@
 import React from 'react';
-import Bannerpic from './images/banner3.jpg';
+import Bannerpic from './images/banner.jpg';
 import Grid from '@material-ui/core/Grid';
-import zIndex from '@material-ui/core/styles/zIndex';
+
+
 
 
 const bannerStyle ={
     width: "100%",
-    height: "80vh",
+    height: "75vh",
     backgroundImage: `url(${Bannerpic})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    border: '3px solid black',
+   
+    //filter: 'blur(1px)',
+
     
 }
 const Banner = (props) => {
     return (
 
         <Grid container item style={bannerStyle} justify="center" alignItems="center">
-            <Grid item  style={{border: '3px solid lightblue'}}>
+            <Grid item>
             {props.children}
             </Grid>
         </Grid>

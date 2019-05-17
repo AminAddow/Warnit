@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 
 const styles = {
     infocard: {
-        marginTop: "10px"   
+        marginTop: "15px"   
 
     },
   card: {
@@ -34,7 +34,7 @@ function TextCard(props) {
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
-    <Grid  container direction="row" justify="center" alignItems="center" className={classes.infocard} style={{border: '3px solid pink'}}>
+    <Grid  container direction="row" justify="center" alignItems="center" className={classes.infocard} >
     <Grid item xs={11}>
     <Card className={classes.card} >
       <CardContent>
