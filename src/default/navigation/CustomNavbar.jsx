@@ -12,6 +12,7 @@ export default class CustomNavbar extends Component {
           className="navbar-static-top navbar-custom primary"
           collapseOnSelect
           expand="md"
+          
         >
           <Navbar.Brand className="navbar-brand">
             <Link to="/">Warnit</Link>

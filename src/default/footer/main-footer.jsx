@@ -6,12 +6,13 @@ import Paper from "@material-ui/core/Paper";
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    background: "#cccccc",
+    backgroundColor: theme.palette.secondary.light,
     border: 0,
     minHeight: 200,
     width: "fit-content",
     justify: "center",
-    alignItems: "center"
+    alignItems: "center",
+    
   },
 
   bottom: {
@@ -38,6 +39,9 @@ const styles = theme => ({
   },
   Content: {
     padding: "5px 30px"
+  },
+  links: {
+    color: theme.palette.secondary.dark
   }
 });
 
@@ -45,13 +49,10 @@ function Footer(props) {
   const { classes } = props;
   return (
     <Grid container>
-      <Paper className={classes.root}>
+      <Paper className={classes.root} square="true">
         <Grid item md={6} xs={12} className={classes.item}>
           <Typography className={classes.Content}>
-            Minos arbeider med å bedre psykisk helse hos barn og unge. Vi har
-            utviklet et skybasert kartleggingsverktøy kalt Okei, med mål om å
-            gjøre det enklere å fange opp og forebygge mobbing, omsorgssvikt og
-            psykiske vansker hos barn og unge.
+          Illustrasjoner av <a href="https://undraw.co/">unDraw</a>
           </Typography>
         </Grid>
         <Grid item md={6} xs={12} className={classes.item}>
@@ -59,7 +60,7 @@ function Footer(props) {
             Markensgate 8<br />
             Tlf: 407 01 100
             <br /> post@minos.no
-            <br /> <a href="https://www.minos.no/">minos.no</a>
+            <br /> <a style={{hover: 'red'}} className={classes.links} href="https://www.minos.no/">minos.no</a>
           </Typography>
         </Grid>
 

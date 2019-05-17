@@ -3,18 +3,26 @@ import { createMuiTheme} from '@material-ui/core/styles';
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: '#97EAD2',
+            main: '#97EAD2', // Pale robin Egg blue
+            light: 'red',
+            dark: '#65B49D', // Darker pale robin
         },
         secondary: {
-            main: '#FFFFFF'
+            main: '#FFFFFF', //white
+            dark: '#FFF07C', // sunny
+            light: '#F0E9B6' // sunny light
         },
-        sunny: {
-            main: '#FFF07C',
-        },
+        contrast: {
+            main: "#FFFFFF", //
+            dark: "#ACACAC", 
+            light: "#FFFFFF"
+        }
+  
+       
     },
     typography: {    
         useNextVariants: true,
-        fontFamily: 'sans-serif'
+        fontFamily: 'Segoe UI'
     },
     MuiAppBar: {
         shadows: ["none"]

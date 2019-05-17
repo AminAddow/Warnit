@@ -10,10 +10,12 @@ import Grid from '@material-ui/core/Grid';
 
 const styles = {
     infocard: {
-        marginTop: "15px"   
+        marginTop: "15px",
+      
 
     },
-  card: {
+  cardbox: {
+      //color: "red"
       
   },
   bullet: {
@@ -35,11 +37,11 @@ function TextCard(props) {
 
   return (
     <Grid  container direction="row" justify="center" alignItems="center" className={classes.infocard} >
-    <Grid item xs={11}>
+    <Grid item xs={11} sm={10} className={classes.cardbox}>
     <Card className={classes.card} >
       <CardContent>
         <Typography className={classes.title}  gutterBottom>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Warnit er et nettside som man kan får råd og veiledning, når man er bekymret for noen eller har mistanke om radikalisering. Ved hjelp av gjennomføring av spørsmål settet kan man få råd og veiledning om bestemte subjektet.  Warnit er en  del av Minos.
         </Typography>
       
         <Typography className={classes.pos} >

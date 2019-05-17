@@ -3,17 +3,15 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Fab from '@material-ui/core/Fab';
-//import Click from '../images/Click';
 import Questionset from "./../questioning";
+import Typography from "@material-ui/core/Typography";
 
 const styles = theme => ({
-  fab: {
-    margin: theme.spacing.unit,
-    
-  },
-  extendedIcon: {
-    marginRight: theme.spacing.unit ,
-  },
+
+  div:{
+   
+  
+  }
 });
 
 
@@ -21,14 +19,17 @@ function Buttons(props) {
   const { classes, handleModalOpen, handleModalClose, stateModalOpen } = props;
   return (
 
-      <div>
-       <Fab
+      <div className={classes.div}>
+
+      <Fab style={{marginTop: '-30px'}}
         variant="extended"
+        size="large"
         color="primary"
         className={classes.fab}
-        onClick={handleModalOpen}
-      >Ønsker du å svare på spørsmålskjema?
+        onClick={handleModalOpen}>
+        Gjennomfør spørsmålskjema
       </Fab>
+
       <Questionset
         modalOpen={stateModalOpen}
         handleModalClose={handleModalClose}
