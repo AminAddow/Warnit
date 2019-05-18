@@ -3,5 +3,5 @@ module.exports = {
   "globPatterns": [
     "**/*.{JPG,json,ico,html,svg,js,webmanifest,css,JPEGXR}"
   ],
-  "swSrc": "build\\service-worker.js"
+  "swDest": "build\\service-worker.js"
 };
