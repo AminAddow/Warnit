@@ -12,6 +12,27 @@ import NoMatch from "./default/404";
 import Questionset from "./default/questioning";
 import Footer from "./default/footer/main-footer";
 import AdminPage from "./admin/adminpage";
+import { Grid } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
+import PropTypes from "prop-types";
+
+// Her kaller vi på Router som er i './components/shared/navigation/router'.
+const styles = () => ({
+  container: {
+    minHeight: "100%",
+    position: "relative",
+    marginBottom: 0
+  },
+  body: {
+    position: "relative",
+    minHeight: "calc(100vh - 256px)",
+    height: "100%"
+  },
+  footer: {
+    width: "100vw",
+    bottom: 0
+  }
+});
 
 class App extends Component {
   constructor(props) {
@@ -41,7 +62,9 @@ class App extends Component {
       }
     });
   }
+
   render() {
+    const { classes } = this.props;
     return (
       <Router>
         <div>
@@ -68,8 +91,13 @@ class App extends Component {
           <Footer />
         </div>
       </Router>
+
     );
   }
 }
 
-export default App;
+App.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(App);

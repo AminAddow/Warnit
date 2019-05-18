@@ -21,7 +21,7 @@ const styles = {
   },
   div: {
     padding: 10,
-    height: "92vh",
+    height: "100%",
     width: "100vw"
   },
   cardcontent: {
