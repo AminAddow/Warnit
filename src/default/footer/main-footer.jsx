@@ -38,7 +38,7 @@ function Footer(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <Grid container spacing={12} style={{ paddingLeft: "10%", paddingRight: "10%", paddingTop: 30, paddingBottom: 20 }} className={classes.root}>
+      <Grid container spacing={16} style={{ paddingLeft: "10%", paddingRight: "10%", paddingTop: 30, paddingBottom: 20 }} className={classes.root}>
         <Grid item sm={6} xs={12} className={classes.item}>
             <Typography>
                 Minos arbeider med å bedre psykisk helse hos barn og unge.
@@ -47,7 +47,7 @@ function Footer(props) {
                 omsorgssvikt og psykiske vansker hos barn og unge.
             </Typography>
         </Grid>
-        <Grid item sm={6} xs={12} spacing={16} className={classes.item}>
+        <Grid item sm={6} xs={12} className={classes.item}>
             <Typography variant="body2">
                 Markensgate 8<br />
                 Tlf: 407 01 100<br /> post@minos.no<br /> <a href="https://www.minos.no/">minos.no</a>

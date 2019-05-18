@@ -13,24 +13,26 @@ import Questionset from "./default/questioning";
 import Footer from "./default/footer/main-footer";
 import AdminPage from "./admin/adminpage";
 
-// Her kaller vi på Router som er i './components/shared/navigation/router'.
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       authenticated: false,
-      user: ""
+      uid: "",
+      displayname: ""
     };
   }
 
   componentDidMount() {
+    // Create connection to firebase/auth
     const auth = firebase.auth();
+    // Check if user is logged in. If yes, set auth to true and get data
     auth.onAuthStateChanged(user => {
       if (user) {
         this.setState({
           authenticated: true,
-          user: user.uid
+          uid: user.uid,
+          displayname: user.displayName
         });
       } else {
         this.setState({
@@ -44,14 +46,15 @@ class App extends Component {
       <Router>
         <div>
           <Navbar
-            user={this.state.user}
+            user={this.state.uid}
+            name={this.state.displayname}
             authenticated={this.state.authenticated}
           />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/Omoss" component={Omoss} />
             <Route
-              user={this.state.user}
+              user={this.state.uid}
               authenticated={this.state.authenticated}
               path="/Workspace"
               component={Workspace}

@@ -2,23 +2,23 @@ import React, { Component } from "react";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import firebase from "./../../firebase";
-// import './../../../stylesheet/customnavbar.css';
+// import "./../../stylesheet/customnavbar.css";
 
 export default class CustomNavbar extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div>
-        <Navbar
-          className="navbar-static-top navbar-custom primary"
-          collapseOnSelect
-          expand="md"
-        >
-          <Navbar.Brand className="navbar-brand">
+        <Navbar collapseOnSelect expand="lg">
+          <Navbar.Brand>
             <Link to="/">Warnit</Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav ">
-            <Nav pullright="true" className="">
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
               {this.props.authenticated ? (
                 <Link to="/Workspace">
                   <NavItem className="navbar-text nav-link">Workspace</NavItem>
@@ -42,25 +42,19 @@ export default class CustomNavbar extends Component {
               </Link>
 
               {this.props.authenticated ? (
-                // <div className="justify-content-end"><p>User is logged in</p></div>
-                <NavItem
-                  className="navbar-text nav-link ml-auto"
-                  onClick={() =>
-                    firebase
-                      .auth()
-                      .signOut()
-                      .then(function() {
-                        return <Redirect to="/" />;
-                      })
-                  }
-                >
-                  Logg ut {this.props.user}
-                </NavItem>
+                <Link to="/">
+                  <NavItem
+                    className="navbar-text nav-link"
+                    onClick={() => {
+                      firebase.auth().signOut();
+                    }}
+                  >
+                    Logg ut <b>{this.props.name}</b>
+                  </NavItem>
+                </Link>
               ) : (
                 <Link to="/Login">
-                  <NavItem className="navbar-text nav-link ml-auto">
-                    Login
-                  </NavItem>
+                  <NavItem className="navbar-text nav-link">Login</NavItem>
                 </Link>
               )}
             </Nav>
