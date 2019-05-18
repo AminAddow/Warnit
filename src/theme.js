@@ -4,7 +4,7 @@ const theme = createMuiTheme({
     palette: {
         primary: {
             main: '#97EAD2', // Pale robin Egg blue
-            light: 'red',
+            light: '#272727', //raisin black
             dark: '#65B49D', // Darker pale robin
         },
         secondary: {

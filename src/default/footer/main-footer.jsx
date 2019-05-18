@@ -5,6 +5,11 @@ import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 const styles = theme => ({
   root: {
+    marginTop: 15
+    
+  },
+
+    paper: {
     flexGrow: 1,
     backgroundColor: theme.palette.secondary.light,
     border: 0,
@@ -12,64 +17,80 @@ const styles = theme => ({
     width: "fit-content",
     justify: "center",
     alignItems: "center",
+   
     
   },
 
-  bottom: {
-    background: "#666666",
+  /*bottom: {
+    backgroundColor: theme.palette.primary.light,
     alignItems: "center",
     padding: 0
-  },
+  },*/
 
-  item: {
+  /*item: {
     justify: "center",
     alignItems: "center",
     padding: 0,
     width: "20"
-  },
+  },*/
 
-  copyright: {
+ copyright: {   // removed position absolute
     padding: 10,
     margin: 0,
-    background: "#666666",
-    width: "100vw",
-    position: "absolute",
-    color: "white",
+    backgroundColor: theme.palette.primary.light,
     bottom: 0
-  },
+},
   Content: {
     padding: "5px 30px"
   },
   links: {
-    color: theme.palette.secondary.dark
+    color: theme.palette.primary.dark
   }
 });
 
 function Footer(props) {
   const { classes } = props;
   return (
-    <Grid container>
-      <Paper className={classes.root} square="true">
-        <Grid item md={6} xs={12} className={classes.item}>
-          <Typography className={classes.Content}>
-          Illustrasjoner av <a href="https://undraw.co/">unDraw</a>
-          </Typography>
-        </Grid>
-        <Grid item md={6} xs={12} className={classes.item}>
-          <Typography variant="body2" className={classes.Content}>
-            Markensgate 8<br />
-            Tlf: 407 01 100
-            <br /> post@minos.no
-            <br /> <a style={{hover: 'red'}} className={classes.links} href="https://www.minos.no/">minos.no</a>
-          </Typography>
-        </Grid>
+    <Grid container item xs={12} sm={12} className={classes.root} style={{border: '2px solid blue'}}>
+      <Paper className={classes.paper}  xs={12} sm={12} square="true" style={{border: '2px solid green'}}>
 
-        <Grid item xs={12} className={classes.bottom}>
-          <Grid item xs={12} className={classes.copyright}>
-            <Typography variant="body2">2019 © Minos</Typography>
+          <Grid item md={12} xs={12} className={classes.item} style={{border: '2px solid red'}}>
+            <Typography className={classes.Content}>
+            Illustrasjoner av <a className={classes.links} href="https://undraw.co/">unDraw</a>
+            </Typography>
           </Grid>
-        </Grid>
-      </Paper>
+
+          <Grid item md={12} xs={12} className={classes.item} style={{border: '2px solid red'}}>
+            <Typography className={classes.Content}>
+            Banner av <a className={classes.links} href="https://unsplash.com/photos/luoaf3UV3HE">Nick Scheerbart</a>
+            </Typography>
+          </Grid>
+
+          <Grid item md={12} xs={12} className={classes.item} style={{border: '2px solid red'}}>
+            <Typography className={classes.Content}>
+            <div>Icons made by <a className={classes.links}href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a className={classes.links}href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a  className={classes.links}href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            </Typography>
+          
+          </Grid>
+
+
+          <Grid item md={12} xs={12} className={classes.item} style={{border: '2px solid red'}}>
+              <Typography variant="body2" className={classes.Content}>
+                Markensgate 8<br />
+                Tlf: 407 01 100
+                <br /> post@minos.no
+                <br /> <a  className={classes.links} href="https://www.minos.no/">minos.no</a>
+                
+              </Typography>
+          </Grid>
+
+          <Grid item xs={12} className={classes.copyright} style={{border: '2px solid purple'}}>
+            <Typography variant="body2" color="secondary">2019 © Minos</Typography>
+          </Grid>
+
+        </Paper>
+        
+
     </Grid>
   );
 }
