@@ -116,7 +116,7 @@ class EditQuestionset extends Component {
             >
               <Grid container spacing={16}>
                 <Grid item xs={12}>
-                  <Typography variant="display1" className={classes.dispTypo}>
+                  <Typography variant="body1" className={classes.dispTypo}>
                     Endre det nåværende spørsmålssettet
                   </Typography>
                 </Grid>
@@ -125,8 +125,8 @@ class EditQuestionset extends Component {
                     let data = item.split(";--");
                     let type = data[1]; // type of question
                     let questionValue = data[0]; // value
-                    console.log("type " + type);
-                    console.log("value " + questionValue);
+                    //console.log("type " + type);
+                    //console.log("value " + questionValue);
 
                     return (
                       <NewEditableQuestion
