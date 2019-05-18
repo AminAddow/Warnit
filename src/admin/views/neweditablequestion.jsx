@@ -16,7 +16,7 @@ const NewEditableQuestion = props => {
   return (
     <TextField
       id={props.id}
-      label={props.questionType}
+      label={props.type}
       style={{ margin: 8 }}
       placeholder={props.questionType}
       multiline

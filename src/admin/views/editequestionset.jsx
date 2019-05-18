@@ -126,6 +126,7 @@ class EditQuestionset extends Component {
                       <NewEditableQuestion
                         id={"themeid-" + this.state.currentTheme}
                         questionType={"Normal spørsmål"}
+                        type={"normal"}
                         defaultVal={item}
                       />
                     );
