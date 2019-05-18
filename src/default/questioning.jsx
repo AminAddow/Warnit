@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // MUI
-import Button from "@material-ui/core/Button";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";

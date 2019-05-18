@@ -89,7 +89,7 @@ class LoginUser extends Component {
       return <Redirect to="/workspace" />;
     }
     return (
-      <Col style={{ maxWidth: "99vh", margin: "10% auto" }}>
+      <Col>
         <Card className="justify-content-center">
           <Card.Body>
             {this.state.display === true ? (

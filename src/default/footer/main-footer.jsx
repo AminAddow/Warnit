@@ -40,10 +40,7 @@ const styles = theme => ({
     padding: "5px 30px"
   },
   links: {
-    color: theme.palette.contrast.light,
-    "&$hover": {
-      color: theme.palette.primary.dark
-    }
+    color: theme.palette.contrast.light
   }
 });
 
@@ -63,7 +60,7 @@ function Footer(props) {
               className={classes.links}
               href="https://undraw.co/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               unDraw
             </a>
@@ -79,7 +76,7 @@ function Footer(props) {
             Banner av{" "}
             <a
               className={classes.links}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               href="https://unsplash.com/photos/luoaf3UV3HE"
             >
@@ -100,7 +97,7 @@ function Footer(props) {
               href="https://www.freepik.com/"
               title="Freepik"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Freepik
             </a>{" "}
@@ -110,7 +107,7 @@ function Footer(props) {
               href="https://www.flaticon.com/"
               title="Flaticon"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               www.flaticon.com
             </a>{" "}
@@ -120,7 +117,7 @@ function Footer(props) {
               href="http://creativecommons.org/licenses/by/3.0/"
               title="Creative Commons BY 3.0"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               CC 3.0 BY
             </a>
@@ -142,7 +139,7 @@ function Footer(props) {
               className={classes.links}
               href="https://www.minos.no/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               minos.no
             </a>
