@@ -5,7 +5,7 @@ import Workspace from "./default/workspace";
 import Login from "./default/login";
 import Home from "./default/home";
 import Omoss from "./default/omoss";
-import Dokumenter from "./default/dokumenter";
+import Ressurser from "./default/ressurser";
 import Navbar from "./default/navigation/CustomNavbar";
 import firebase from "./firebase";
 import NoMatch from "./default/404";
@@ -79,7 +79,7 @@ class App extends Component {
                   path="/Workspace"
                   component={Workspace}
                 />
-                <Route path="/Dokumenter" component={Dokumenter} />
+                <Route path="/Ressurser" component={Ressurser} />
                 <Route path="/AdminPage" component={AdminPage} />
                 <Route path="/Login" component={Login} />
                 <Route component={NoMatch} />
