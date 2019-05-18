@@ -4,8 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 const styles = theme => ({
   typo: {
     padding: 15,
-    fontSize: 22,
-    fontStyle: "oblique"
+    fontSize: 18
   }
 });
 const Question = props => {

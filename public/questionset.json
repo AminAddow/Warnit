@@ -1,6 +1,6 @@
 [
   {
-    "Theme": "Interesser/ Utseende/ Symbolikk",
+    "Theme": "Interesser- Utseende- Symbolikk",
     "ThemeQuestion": "På en skala (fra 0 til 10), i hvor stor grad har subjektets interesser, utseende og/eller bruk av symbolikk endret seg?",
     "Questions": [
       {
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "Theme": "Uttalelser / Ytringer",
+    "Theme": "Uttalelser- Ytringer",
     "ThemeQuestion": "På en skala (fra 0 til 10), i hvor stor grad har subjektets Uttalelser / Ytringer endret seg?",
     "Questions": [
       {

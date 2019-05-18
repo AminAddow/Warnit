@@ -86,13 +86,14 @@ class Ressurser extends Component {
                     <Grid item xs={4}>
                       <Link
                         href="https://lovdata.no/sok?q=radikalisering"
+                        rel="noreferrer"
                         target="_blank"
                         color="inherit"
                         color="inherit"
                         className={classes.bigAvatar}
                       >
                         <Avatar
-                          alt="Remy Sharp"
+                          alt="Logo for link til lovdata"
                           src="./lovedata.png"
                           className={classes.bigAvatar}
                         />
@@ -102,6 +103,7 @@ class Ressurser extends Component {
                     <Grid item xs={6}>
                       <Link
                         href="https://lovdata.no/sok?q=radikalisering"
+                        rel="noreferrer"
                         target="_blank"
                       >
                         <Typography variant="body1" className={classes.link}>
@@ -115,11 +117,12 @@ class Ressurser extends Component {
                       <Link
                         href="https://www.regjeringen.no/no/sub/radikalisering/aktuelt/id699413/"
                         color="inherit"
+                        rel="noreferrer"
                         target="_blank"
                         className={classes.bigAvatar}
                       >
                         <Avatar
-                          alt="Remy Sharp"
+                          alt="Logo for link til regjeringen"
                           src="./regjeringen.png"
                           className={classes.bigAvatar}
                         />
@@ -128,6 +131,7 @@ class Ressurser extends Component {
                     <Grid item xs={6}>
                       <Link
                         href="https://www.regjeringen.no/no/sub/radikalisering/aktuelt/id699413/"
+                        rel="noreferrer"
                         target="_blank"
                       >
                         <Typography variant="body1" className={classes.link}>
@@ -152,10 +156,11 @@ class Ressurser extends Component {
                       <Link
                         href="https://www.regjeringen.no/no/sub/radikalisering/veileder/veileder-som-pdf/id2405821/"
                         className={classes.bigAvatar}
+                        rel="noreferrer"
                         target="_blank"
                       >
                         <Avatar
-                          alt="Remy Sharp"
+                          alt="Link til regjeringen"
                           src="PDFIcon.svg"
                           className={classes.bigAvatar}
                         />
@@ -164,6 +169,7 @@ class Ressurser extends Component {
                     <Grid item xs={6}>
                       <Link
                         href="https://www.regjeringen.no/no/sub/radikalisering/veileder/veileder-som-pdf/id2405821/"
+                        rel="noreferrer"
                         target="_blank"
                       >
                         <Typography variant="body1" className={classes.link}>

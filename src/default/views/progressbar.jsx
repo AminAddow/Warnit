@@ -15,7 +15,7 @@ const ProgressBar = props => {
         const props = {};
 
         return (
-          <Step key={label} {...props}>
+          <Step key={label} {...props} style={{ width: 60, height: "auto" }}>
             <StepLabel>{label}</StepLabel>
           </Step>
         );

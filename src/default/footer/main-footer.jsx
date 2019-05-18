@@ -34,13 +34,16 @@ const styles = theme => ({
   copyright: {
     // removed position absolute
     padding: 10,
-    backgroundColor: theme.palette.contrast.light
+    backgroundColor: theme.palette.secondary.light
   },
   Content: {
     padding: "5px 30px"
   },
   links: {
-    color: theme.palette.secondary.light
+    color: theme.palette.contrast.light,
+    "&$hover": {
+      color: theme.palette.primary.dark
+    }
   }
 });
 
@@ -56,7 +59,12 @@ function Footer(props) {
             className={classes.Content}
           >
             Illustrasjoner av{" "}
-            <a className={classes.links} href="https://undraw.co/">
+            <a
+              className={classes.links}
+              href="https://undraw.co/"
+              target="_blank"
+              rel="noreferrer"
+            >
               unDraw
             </a>
           </Typography>
@@ -71,6 +79,8 @@ function Footer(props) {
             Banner av{" "}
             <a
               className={classes.links}
+              rel="noreferrer"
+              target="_blank"
               href="https://unsplash.com/photos/luoaf3UV3HE"
             >
               Nick Scheerbart
@@ -89,6 +99,8 @@ function Footer(props) {
               className={classes.links}
               href="https://www.freepik.com/"
               title="Freepik"
+              target="_blank"
+              rel="noreferrer"
             >
               Freepik
             </a>{" "}
@@ -97,6 +109,8 @@ function Footer(props) {
               className={classes.links}
               href="https://www.flaticon.com/"
               title="Flaticon"
+              target="_blank"
+              rel="noreferrer"
             >
               www.flaticon.com
             </a>{" "}
@@ -106,6 +120,7 @@ function Footer(props) {
               href="http://creativecommons.org/licenses/by/3.0/"
               title="Creative Commons BY 3.0"
               target="_blank"
+              rel="noreferrer"
             >
               CC 3.0 BY
             </a>
@@ -123,14 +138,19 @@ function Footer(props) {
             Tlf: 407 01 100
             <br /> post@minos.no
             <br />{" "}
-            <a className={classes.links} href="https://www.minos.no/">
+            <a
+              className={classes.links}
+              href="https://www.minos.no/"
+              target="_blank"
+              rel="noreferrer"
+            >
               minos.no
             </a>
           </Typography>
         </Grid>
 
         <Grid item xs={12} align="center" className={classes.copyright}>
-          <Typography variant="body2" color="secondary">
+          <Typography variant="body2" color="inherit">
             2019 © Minos
           </Typography>
         </Grid>

@@ -8,13 +8,15 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import { Paper } from "@material-ui/core";
 
 const styles = theme => ({
   head: {
-    fontSize: "1em",
+    fontSize: 18,
     color: "white"
   },
   resultat: {
+    fontSize: 18,
     maxWidth: "90%",
     width: "auto",
     margin: "0 auto"
@@ -123,7 +125,11 @@ class ResultTable extends Component {
     this.state.advicedCourseOfAction.map(item => {
       //console.log(item);
       return (
-        <Typography variant="h6" className={this.props.classes.resultat}>
+        <Typography
+          variant="h6"
+          className={this.props.classes.resultat}
+          align="center"
+        >
           {"• " + item}
         </Typography>
       );
@@ -133,24 +139,31 @@ class ResultTable extends Component {
     return (
       <Grid container spacing={16}>
         <Grid item xs={12}>
-          <Typography variant="h5">
-            Basert på din besvarelse anbefales det å gjøre følgende tiltak:
-          </Typography>
-          {this.displayAdvicedActionRows()}
+          <Paper style={{ padding: 10, marginTop: 10 }}>
+            <Typography variant="h6" align="center" fontWeight="medium">
+              Basert på din besvarelse anbefales det å gjøre følgende tiltak:
+            </Typography>
+            {this.displayAdvicedActionRows()}
+          </Paper>
         </Grid>
-        <Grid item xs={12}>
-          <h2> resultat basert på dine følgende svar</h2>
-        </Grid>
-        <Grid item xs={12}>
-          <Table>
-            <TableHead className={classes.head}>
-              <TableRow>
-                <TableCell>Spørsmåls type</TableCell>
-                <TableCell>Svar verdi</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>{this.displayResultRows}</TableBody>
-          </Table>
+
+        <Grid container item xs={12} justify="center">
+          <Paper style={{ padding: 10, width: "100%" }}>
+            <Grid item xs={12}>
+              <Typography variant="h6" align="center">
+                Resultat basert på dine følgende svar
+              </Typography>
+            </Grid>
+            <Table>
+              <TableHead className={classes.head}>
+                <TableRow>
+                  <TableCell>Spørsmåls type</TableCell>
+                  <TableCell>Svar verdi</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>{this.displayResultRows}</TableBody>
+            </Table>
+          </Paper>
         </Grid>
       </Grid>
     );

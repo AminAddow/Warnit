@@ -21,9 +21,10 @@ const styles = theme => ({
   },
   paper: {
     margin: "10% auto",
-    width: "94%",
+    width: "93%",
+    maxWidth: 800,
     minHeight: "20%",
-    maxHeight: "80%",
+    maxHeight: "90%",
     overflow: "auto",
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing.unit,
@@ -175,7 +176,7 @@ class Questionset extends Component {
             into state before proceeding to make use of it through props, this
             also avoids causing any undefined variables to pop up*/
           <div classes={classes.root}>
-            <Grid container item>
+            <Grid container item xs={12} sm={10} md={8} lg={6}>
               <Popup
                 modalOpen={modalOpen}
                 modalClose={handleModalClose}
@@ -195,7 +196,6 @@ class Questionset extends Component {
                     answersSubmitted={this.state.completedQuestions}
                   />
                 )}
-                <Divider variant="middle" />
               </Popup>
             </Grid>
           </div>

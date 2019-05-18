@@ -11,24 +11,26 @@ const styles = theme => ({
     width: "80%",
     height: "auto",
     padding: 10,
-    margin: "5% auto",
+    margin: "1% auto",
     overflow: "hidden"
   },
   button: {
-    margin: theme.spacing.unit
+    marginTop: 35,
+    padding: 10
   },
   slider: {
     height: "fit-content",
     width: "100%",
-    margin: "0 auto"
+    margin: "0 auto",
+    padding: 15
   },
   track: {
-    height: 20,
+    height: 15,
     borderRadius: 100
   },
   thumb: {
-    width: 30,
-    height: 30
+    width: 20,
+    height: 20
   },
   typoBorder: {
     border: "2px solid black",
@@ -64,6 +66,13 @@ class SliderOption extends Component {
         spacing={24}
         className={classes.root}
       >
+        <Grid item xs={12}>
+          <div className={classes.typoBorder}>
+            <Typography className={classes.typography} variant="h4">
+              {this.state.sliderVal}
+            </Typography>
+          </div>
+        </Grid>
         <Grid item xs={12} className={classes.slider}>
           <Slider
             classes={{
@@ -77,13 +86,7 @@ class SliderOption extends Component {
             onChange={this.handleChange}
           />
         </Grid>
-        <Grid item xs={12}>
-          <div className={classes.typoBorder}>
-            <Typography className={classes.typography} variant="h4">
-              {this.state.sliderVal}
-            </Typography>
-          </div>
-        </Grid>
+
         <Grid item align="center" xs={12}>
           <Button
             variant="contained"
