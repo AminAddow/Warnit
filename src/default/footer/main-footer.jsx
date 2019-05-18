@@ -44,6 +44,7 @@ const styles = theme => ({
 function Footer(props) {
   const { classes } = props;
   return (
+
     <Grid container>
       <Paper className={classes.root}>
         <Grid item md={6} xs={12} className={classes.item}>
