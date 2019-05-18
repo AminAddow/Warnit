@@ -25,8 +25,8 @@ export default class CustomNavbar extends Component {
               ) : (
                 <div />
               )}
-              <Link to="/Dokumenter">
-                <NavItem className="navbar-text nav-link">Dokumenter</NavItem>
+              <Link to="/Ressurser">
+                <NavItem className="navbar-text nav-link">Ressurser</NavItem>
               </Link>
               <Link to="/Omoss">
                 <NavItem className="navbar-text nav-link">Om Oss</NavItem>

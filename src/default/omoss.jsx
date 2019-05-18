@@ -29,7 +29,6 @@ const styles = {
     width: "auto"
   },
   test: {
-    //minHeight: 500,
     height: 800
   }
 };
@@ -140,12 +139,12 @@ class Omoss extends Component {
                   </Grid>
                   <Grid item xs={12} sm={9}>
                     <Typography variant="h5">
-                      Tjenesteutvikling av Studentene ved USN
+                      Tjeneste utviklet av Studentene ved USN Ringerike
                     </Typography>
                     <Typography variant="subheading">
                       {" "}
                       Thor Eivind Skogstad Bakke, Haseeb Rana, Khalid Asefi,
-                      Amin Addow{" "}
+                      Amin Dahir Addow{" "}
                     </Typography>
                   </Grid>
                 </Grid>

@@ -1,25 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import {BrowserRouter as Router, Route, Link, Redirect, withRouter} from "react-router-dom";
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect,
+  withRouter
+} from "react-router-dom";
 // import Link from '@material-ui/core/Link';
-import Workspace from './../workspace';
-import Login from './../login';
-import Home from './../home';
-import Omoss from './../omoss';
-import Dokumenter from './../dokumenter';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import Workspace from "./../workspace";
+import Login from "./../login";
+import Home from "./../home";
+import Omoss from "./../omoss";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
 // Har forsøkt å få denne til å fungere men kan hende vi fjerner denne.
 // Kan bli neklere å implementere Style på egenhånd
 // -----------------------------------------------------------------------------------------------------
-
-
 
 // function AppAppBar(props){
 //     const { classes } = props;
