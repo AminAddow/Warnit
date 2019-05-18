@@ -25,7 +25,7 @@ const Banner = props => {
     >
       <Grid item xs={12} align="center" style={{ marginTop: "40px" }}>
         <Typography xs={12} color="inherit" variant="h3">
-          Ikke vær redd <br /> si ifra
+          Ikke vær redd, <br /> si ifra
         </Typography>
       </Grid>
       <Grid item align="center">
