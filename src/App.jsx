@@ -18,16 +18,17 @@ import PropTypes from "prop-types";
 // Her kaller vi på Router som er i './components/shared/navigation/router'.
 const styles = () => ({
   container: {
-    minHeight: "100%",
+    minHeight: "100vh",
     position: "relative",
     marginBottom: 0
   },
   body: {
     position: "relative",
-    minHeight: "calc(100vh - 256px)",
+    minHeight: "calc(100vh - 295px)",
     height: "100%"
   },
   footer: {
+    height: "100%",
     width: "100vw",
     bottom: 0
   }

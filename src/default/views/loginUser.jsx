@@ -89,53 +89,51 @@ class LoginUser extends Component {
       return <Redirect to="/workspace" />;
     }
     return (
-      <div>
-        <Col>
-          <Card className="justify-content-center" style={{ width: "25rem" }}>
-            <Card.Body>
-              {this.state.display === true ? (
-                <Alert variant="danger">
-                  <p>{this.state.error}</p>
-                </Alert>
-              ) : (
-                <div />
-              )}
-              <Form
-                onSubmit={event => {
-                  this.authWithEmailPassword(event);
-                }}
-                ref={form => {
-                  this.loginForm = form;
-                }}
-              >
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    placeholder="Epost"
-                    checked={this.state.email}
-                    onChange={this.handleChange}
-                  />
-                </Form.Group>
-                <Form.Group controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    name="pass"
-                    placeholder="Password"
-                    value={this.state.pass}
-                    onChange={this.handleChange}
-                  />
-                </Form.Group>
-                <Button variant="primary" value="log in" type="submit">
-                  Submit
-                </Button>
-              </Form>
-            </Card.Body>
-          </Card>
-        </Col>
-      </div>
+      <Col style={{ maxWidth: "99vh", margin: "10% auto" }}>
+        <Card className="justify-content-center">
+          <Card.Body>
+            {this.state.display === true ? (
+              <Alert variant="danger">
+                <p>{this.state.error}</p>
+              </Alert>
+            ) : (
+              <div />
+            )}
+            <Form
+              onSubmit={event => {
+                this.authWithEmailPassword(event);
+              }}
+              ref={form => {
+                this.loginForm = form;
+              }}
+            >
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="email"
+                  placeholder="Epost"
+                  checked={this.state.email}
+                  onChange={this.handleChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="pass"
+                  placeholder="Password"
+                  value={this.state.pass}
+                  onChange={this.handleChange}
+                />
+              </Form.Group>
+              <Button variant="primary" value="log in" type="submit">
+                Submit
+              </Button>
+            </Form>
+          </Card.Body>
+        </Card>
+      </Col>
     );
   }
 }

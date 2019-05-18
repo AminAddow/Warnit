@@ -113,8 +113,8 @@ class ResultTable extends Component {
     );*/
     return (
       <TableRow>
-        <TableCell>SPØRSMÅLTYPE: {type}</TableCell>
-        <TableCell>SVAR {questionValue}</TableCell>
+        <TableCell>{type}</TableCell>
+        <TableCell>{questionValue}</TableCell>
       </TableRow>
     );
   });
@@ -145,8 +145,8 @@ class ResultTable extends Component {
           <Table>
             <TableHead className={classes.head}>
               <TableRow>
-                <TableCell>Spørsmål</TableCell>
-                <TableCell>Svar</TableCell>
+                <TableCell>Spørsmåls type</TableCell>
+                <TableCell>Svar verdi</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>{this.displayResultRows}</TableBody>

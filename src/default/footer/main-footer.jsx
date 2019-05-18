@@ -5,12 +5,12 @@ import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 const styles = theme => ({
   root: {
-    marginTop: 100
+    marginTop: 10
   },
 
   paper: {
     flexGrow: 1,
-    backgroundColor: theme.palette.secondary.light,
+    backgroundColor: theme.palette.primary.light,
     border: 0,
     minHeight: 200,
     width: "fit-content",
@@ -34,13 +34,13 @@ const styles = theme => ({
   copyright: {
     // removed position absolute
     padding: 10,
-    backgroundColor: theme.palette.primary.light
+    backgroundColor: theme.palette.contrast.light
   },
   Content: {
     padding: "5px 30px"
   },
   links: {
-    color: theme.palette.primary.dark
+    color: theme.palette.secondary.light
   }
 });
 
@@ -50,7 +50,11 @@ function Footer(props) {
     <Grid container item xs={12} sm={12} className={classes.root}>
       <Paper className={classes.paper} xs={12} sm={12} square={true}>
         <Grid item md={12} xs={12} className={classes.item}>
-          <Typography align="center" className={classes.Content}>
+          <Typography
+            align="center"
+            color="secondary"
+            className={classes.Content}
+          >
             Illustrasjoner av{" "}
             <a className={classes.links} href="https://undraw.co/">
               unDraw
@@ -59,7 +63,11 @@ function Footer(props) {
         </Grid>
 
         <Grid item md={12} xs={12} className={classes.item}>
-          <Typography align="center" className={classes.Content}>
+          <Typography
+            align="center"
+            className={classes.Content}
+            color="secondary"
+          >
             Banner av{" "}
             <a
               className={classes.links}
@@ -71,7 +79,11 @@ function Footer(props) {
         </Grid>
 
         <Grid item md={12} xs={12} className={classes.item}>
-          <Typography align="center" className={classes.Content}>
+          <Typography
+            align="center"
+            color="secondary"
+            className={classes.Content}
+          >
             Icons made by{" "}
             <a
               className={classes.links}
@@ -104,6 +116,7 @@ function Footer(props) {
           <Typography
             align="center"
             variant="body2"
+            color="secondary"
             className={classes.Content}
           >
             Markensgate 8<br />

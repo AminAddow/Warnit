@@ -3,6 +3,7 @@ import { Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 const styles = theme => ({
   typo: {
+    padding: 15,
     fontSize: 22,
     fontStyle: "oblique"
   }
@@ -10,7 +11,7 @@ const styles = theme => ({
 const Question = props => {
   const { classes } = props;
   return (
-    <Typography variant="display2" className={classes.typo} align="center">
+    <Typography variant="h6" className={classes.typo} align="center">
       {props.content}
     </Typography>
   );

@@ -1,8 +1,8 @@
 {
-  "name": "warnit",
-  "short_name": "warnit",
-  "theme_color": "#272727",
-  "background_color": "#5DD39E",
+  "name": "Warnit",
+  "short_name": "Warnit",
+  "theme_color": "#97EAD2",
+  "background_color": "#65B49D",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/",
