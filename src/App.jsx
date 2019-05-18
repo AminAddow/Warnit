@@ -15,7 +15,6 @@ import { Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 
-// Her kaller vi på Router som er i './components/shared/navigation/router'.
 const styles = () => ({
   container: {
     minHeight: "100%",

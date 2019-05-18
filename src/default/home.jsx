@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import "./../stylesheet/home.css";
 
 import InfoCard from "./views/InfoCard";
@@ -28,13 +26,8 @@ class Home extends Component {
     const { modalOpen } = this.state;
     return (
       <div>
-        <Grid
-          container
-          justify="center"
-          alignItems="center"
-          
-        >
-          <Grid item xs={12} >
+        <Grid container justify="center" alignItems="center">
+          <Grid item xs={12}>
             <Banner>
               <Buttons
                 handleModalOpen={this.handleModalOpen}

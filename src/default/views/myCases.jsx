@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import firebase from "./../../firebase";
+// import firebase from "./../../firebase";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
@@ -9,10 +9,6 @@ class MyCases extends Component {
     super(props);
     this.state = {};
   }
-
-  // componentDidMount(){
-  //
-  // }
 
   render() {
     return (

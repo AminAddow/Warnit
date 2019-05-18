@@ -7,8 +7,6 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import { spacing } from "@material-ui/system";
 
 // Workspace skal kun være tilgjengelig for brukere som er logget på.
 // Den skal vise ha en Hei, Brukers navn.
@@ -77,11 +75,6 @@ class Workspace extends Component {
     // We send it to props state
     let name = this.state.name;
 
-    // // Bind value provieded from user with state. This is dynamic.
-    // this.setState({
-    //   [event.target.name]: event.target.value
-    // });
-
     // Sets the value user has chosen to auth in firebase
     user
       .updateProfile({
@@ -141,34 +134,6 @@ class Workspace extends Component {
 
     return (
       <div>
-        {/* {this.state.show ? (
-          <Modal show={this.state.show} onHide={this.handleClose} centered>
-            <Modal.Header closeButton>
-              <Modal.Title>Velg ditt brukernavn</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <p>Du har ikke et registrert brukernavn</p>
-              <Form onSubmit={this.handleSubmit}>
-                <Form.Group>
-                  <Form.Label>Brukernavn:</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="displayname"
-                    placeholder="Skriv her"
-                    // onChange={this.handleChange}
-                  />
-                </Form.Group>
-                <Button variant="outline-primary" type="submit">
-                  Submit
-                </Button>
-              </Form>
-            </Modal.Body>
-
-            <Modal.Footer>Denne meldingen vises kun en gang</Modal.Footer>
-          </Modal>
-        ) : (
-          <div />
-        )} */}
         {this.state.authenticated ? (
           <Grid
             container

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import firebase from "./../../firebase";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
@@ -7,12 +6,7 @@ import Typography from "@material-ui/core/Typography";
 class WorkspaceBoard extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   displayname: "Ola Nordmann"
-    // };
   }
-
-  componentDidUpdate() {}
 
   render() {
     return (
