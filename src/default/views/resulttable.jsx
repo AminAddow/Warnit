@@ -13,6 +13,11 @@ const styles = theme => ({
   head: {
     fontSize: "1em",
     color: "white"
+  },
+  resultat: {
+    maxWidth: "90%",
+    width: "auto",
+    margin: "0 auto"
   }
 });
 
@@ -37,9 +42,9 @@ class ResultTable extends Component {
       let questionValue = parseInt(data[1], 10); // parsing the value of the input given to a number
       //console.log("VALLL " + typeof questionValue);
       //calculate possible score by looking at what type of input was sent to this class and determine the possible score
-      questionType === "theme" && questionValue > 0
+      questionType === "tema" && questionValue > 0
         ? (possibleScore = [+possibleScore + 10])
-        : questionType !== "theme" && (possibleScore = [+possibleScore + 1]);
+        : questionType !== "tema" && (possibleScore = [+possibleScore + 1]);
       // calculate users total score
       myScore = [+myScore + questionValue];
     });
@@ -55,32 +60,32 @@ class ResultTable extends Component {
       case userPercentage <= 33:
         colorCode = "Grønn";
         advicedCourseOfAction = [
-          "Grønt tiltak 1",
-          "Grønt tiltak 2",
-          "Grønt tiltak 3"
+          "Gå i samtale med vedkommende",
+          "Benytt en mentor ordning",
+          "Ta kontakt med skole for hjelp av forebygging"
         ];
         break;
       case userPercentage > 33 && userPercentage <= 66:
         colorCode = "Gul";
         advicedCourseOfAction = [
-          "Gult tiltak 1",
-          "Gult tiltak 2",
-          "Gult tiltak 3"
+          "Kontakt nærmeste ressurssenter",
+          "Benytt Politiets forebyggingskontakter"
         ];
         break;
       case userPercentage > 66:
         colorCode = "Rød";
         advicedCourseOfAction = [
-          "Rødt tiltak 1",
-          "Rødt tiltak 2",
-          "Rødt tiltak 3"
+          "Kontakt politiet: tlf 02800",
+          "Kontakt PST lokalt: tlf 02800",
+          "Kontakt PST tlf 23305000",
+          "Pst email: post@pst.politiet.no"
         ];
         break;
       default:
         advicedCourseOfAction = [
-          "Standard tiltak 1",
-          "Standard tiltak 2",
-          "Standard tiltak 3"
+          "Prat med vedkommende",
+          "Benytt en mentor ordning",
+          "Kontakt vedkommendes "
         ];
         break;
     }
@@ -116,17 +121,21 @@ class ResultTable extends Component {
 
   displayAdvicedActionRows = () =>
     this.state.advicedCourseOfAction.map(item => {
-      console.log(item);
-      return <Typography variant="h4"> –>{item}</Typography>;
+      //console.log(item);
+      return (
+        <Typography variant="h6" className={this.props.classes.resultat}>
+          {"• " + item}
+        </Typography>
+      );
     });
   render() {
     const { classes } = this.props;
     return (
       <Grid container spacing={16}>
         <Grid item xs={12}>
-          <h1>
+          <Typography variant="h5">
             Basert på din besvarelse anbefales det å gjøre følgende tiltak:
-          </h1>
+          </Typography>
           {this.displayAdvicedActionRows()}
         </Grid>
         <Grid item xs={12}>

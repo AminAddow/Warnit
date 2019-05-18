@@ -56,7 +56,7 @@ class SliderOption extends Component {
   render() {
     const { classes } = this.props;
     const { sliderVal } = this.state;
-    const array = ["theme", sliderVal];
+    const array = ["tema", sliderVal];
     return (
       <Grid
         container

@@ -60,12 +60,12 @@ class EditQuestionset extends Component {
     let subquestions = [];
 
     questionset[currentTheme].Questions.map(item => {
-      subquestions = subquestions.concat(item.Question);
+      subquestions = subquestions.concat(item.Question + ";-- Normal");
     });
     !themeLoaded
       ? this.setState({
           arrayQuestions: arrayQuestions.concat(
-            questionset[currentTheme].ThemeQuestion
+            questionset[currentTheme].ThemeQuestion + ";-- Tema"
           ),
           themeLoaded: true
         })
@@ -122,11 +122,18 @@ class EditQuestionset extends Component {
                 </Grid>
                 <Grid item xs={12}>
                   {arrayQuestions.map(item => {
+                    let data = item.split(";--");
+                    let type = data[1]; // type of question
+                    let questionValue = data[0]; // value
+                    console.log("type " + type);
+                    console.log("value " + questionValue);
+
                     return (
                       <NewEditableQuestion
                         id={"themeid-" + this.state.currentTheme}
-                        questionType={"Normal spørsmål"}
-                        defaultVal={item}
+                        questionType={type}
+                        type={type}
+                        defaultVal={questionValue}
                       />
                     );
                   })}
