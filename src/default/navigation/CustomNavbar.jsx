@@ -12,8 +12,12 @@ export default class CustomNavbar extends Component {
   render() {
     return (
       <div>
-        <Navbar collapseOnSelect expand="lg">
-          <Navbar.Brand>
+        <Navbar
+          className="navbar-static-top navbar-custom primary"
+          collapseOnSelect
+          expand="md"
+        >
+          <Navbar.Brand className="navbar-brand">
             <Link to="/">Warnit</Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -26,16 +30,11 @@ export default class CustomNavbar extends Component {
               ) : (
                 <div />
               )}
-              <Link to="/Dokumenter">
-                <NavItem className="navbar-text nav-link">Dokumenter</NavItem>
+              <Link to="/Ressurser">
+                <NavItem className="navbar-text nav-link">Ressurser</NavItem>
               </Link>
               <Link to="/Omoss">
                 <NavItem className="navbar-text nav-link">Om Oss</NavItem>
-              </Link>
-              <Link to="/Questionset">
-                <NavItem className="navbar-text nav-link">
-                  Spørsmålssett
-                </NavItem>
               </Link>
               <Link to="/AdminPage">
                 <NavItem className="navbar-text nav-link">Admin</NavItem>

@@ -6,12 +6,12 @@ import {
   Typography,
   Grid,
   Divider,
-  Button,
-  Table,
+  Button
+  /*Table,
   TableHead,
   TableCell,
   TableBody,
-  TableRow
+  TableRow*/
 } from "@material-ui/core";
 import Invite from "./views/invite";
 import EditQuestionset from "./views/editequestionset";
@@ -26,7 +26,7 @@ const styles = theme => ({
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
     left: "5",
-    margin: "auto",
+    margin: "10 auto",
     width: "90%"
   },
   paper: {
@@ -40,10 +40,12 @@ const styles = theme => ({
     outline: "none"
   },
   questionpaper: {
-    width: "98vw",
-    margin: "15vh auto",
+    minWidth: 400,
+    maxWidth: 800,
+    margin: "10vh auto",
     minHeight: "20vh",
-    maxHeight: "70vh"
+    maxHeight: "70vh",
+    overflow: "auto"
   },
   gridCon: {
     margin: "0 auto",
@@ -95,13 +97,13 @@ class AdminPage extends Component {
           <Paper className={classes.root}>
             <Typography variant="h5"> Inviter</Typography>
             <Divider />
-            <Typography variant="display1" className={classes.typoDisplay}>
+            <Typography variant="body1" className={classes.typoDisplay}>
               Denne funksjonen tillater deg å invitere nye brukere som vil få
               administrator tilgang til nettstedet
             </Typography>
             <Button
               size="large"
-              color="primary"
+              color="inherit"
               variant="outlined"
               fullWidth
               onClick={this.handleInviteModalOpen}
@@ -120,11 +122,11 @@ class AdminPage extends Component {
           <Paper className={classes.root}>
             <Typography variant="h5"> Min Bruker</Typography>
             <Divider />
-            <Typography variant="display1" className={classes.typoDisplay}>
+            <Typography variant="body1" className={classes.typoDisplay}>
               Denne funksjonen tillater deg å gjøre endringer på egen bruker ved
               å gi tilgang til egen brukeradministrasjon
             </Typography>
-            <Button size="large" color="primary" variant="outlined" fullWidth>
+            <Button size="large" color="inherit" variant="outlined" fullWidth>
               Gå Til
             </Button>
           </Paper>
@@ -133,13 +135,13 @@ class AdminPage extends Component {
           <Paper className={classes.root}>
             <Typography variant="h5"> Endre Spørsmålssett</Typography>
             <Divider />
-            <Typography variant="display1" className={classes.typoDisplay}>
+            <Typography variant="body1" className={classes.typoDisplay}>
               Denne funksjonen tillater deg å holde spørsmålssettet oppdatert og
               relevant for brukere av systemet.
             </Typography>
             <Button
               size="large"
-              color="primary"
+              color="inherit"
               variant="outlined"
               fullWidth
               onClick={this.handleEditModalOpen}
@@ -155,32 +157,34 @@ class AdminPage extends Component {
             />
           </Paper>
         </Grid>
-        <Grid item xs={12}>
-          <Paper className={classes.root}>
-            <Typography variant="headline">
-              Oversikt over invitasjoner og eksisterende brukere
-            </Typography>
-            <Typography variant="display1" className={classes.displaymsg}>
-              Dette er bare for å vise
-            </Typography>
-            <Table className={classes.table}>
-              <TableHead className={classes.tablehead}>
-                <TableRow>
-                  <TableCell>Email</TableCell>
-                  <TableCell>Sendt</TableCell>
-                  <TableCell>Status</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                <TableRow>
-                  <TableCell>test@minos.no</TableCell>
-                  <TableCell>24/03-2019</TableCell>
-                  <TableCell>Invitert</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </Paper>
-        </Grid>
+        {/*
+          <Grid item xs={12}>
+            <Paper className={classes.root}>
+              <Typography variant="headline">
+                Oversikt over invitasjoner og eksisterende brukere
+              </Typography>
+              <Typography variant="body1" className={classes.displaymsg}>
+                Dette er bare for å vise
+              </Typography>
+              <Table className={classes.table}>
+                <TableHead className={classes.tablehead}>
+                  <TableRow>
+                    <TableCell>Email</TableCell>
+                    <TableCell>Sendt</TableCell>
+                    <TableCell>Status</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>test@minos.no</TableCell>
+                    <TableCell>24/03-2019</TableCell>
+                    <TableCell>Invitert</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </Paper>
+          </Grid>
+        */}
       </Grid>
     );
   }

@@ -19,10 +19,10 @@ class WorkspaceBoard extends Component {
       <div>
         <Card style={{ height: 250 }}>
           <CardContent>
-            <Typography gutterBottom variant="title">
+            <Typography gutterBottom variant="h6">
               Hei <b>{this.props.name}</b>
             </Typography>
-            <Typography variant="subheading">
+            <Typography variant="h6">
               Velkommen til ditt workspace. Her har du mulighet til å opprette
               nye saker, se tidligere saker og se meldinger som berører ditt
               område.

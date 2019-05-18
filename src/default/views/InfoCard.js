@@ -7,7 +7,11 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { ReactComponent as Logo } from "./images/community.svg";
 
-import { UndrawCoding } from "react-undraw";
+import {
+  UndrawConnectedWorld,
+  UndrawCommunity,
+  UndrawTrueFriends
+} from "react-undraw";
 
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -17,7 +21,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 
 const styles = theme => ({
   infocard: {
-    marginTop: "10px"
+    marginTop: 50
   },
   paperGrid: {
     margin: theme.spacing.unit * 2
@@ -25,6 +29,12 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing.unit * 2
+  },
+  heading: {
+    marginTop: "10px"
+  },
+  body: {
+    marginTop: "10px"
   }
 });
 
@@ -37,7 +47,7 @@ const InfoCard = props => {
       justify="center"
       alignItems="center"
       className={classes.infocard}
-      style={{ border: "3px solid blue" }}
+      background-color="#FFF07C"
     >
       <Grid
         sm={5}
@@ -49,26 +59,25 @@ const InfoCard = props => {
         wrap="nowrap"
       >
         <Paper elevation={2} className={classes.paper}>
-          <Grid
-            container
-            item
-            justify="center"
-            style={{ border: "3px solid blue" }}
-          >
-            <Grid container item style={{ border: "3px solid blue" }}>
-              <UndrawCoding height="100" />
+          <Grid container item justify="center">
+            <Grid container item style={{ padding: 20 }}>
+              <UndrawConnectedWorld
+                primaryColor="#5DD39E"
+                height="125px"
+                name="Connected World"
+              />
             </Grid>
-            <Typography variant="h4">Box 1</Typography>
-            <Typography variant="body1">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.{" "}
+            <Typography className={classes.heading} variant="h4">
+              Verden
+            </Typography>
+            <Typography className={classes.body} variant="body1" align="center">
+              Samhold og fellesskap gjør verden et bedre sted å leve i. Det er
+              viktig at vi har respekt for hverandre og er aktivt medlemer av
+              samfunnet.
             </Typography>
           </Grid>
         </Paper>
       </Grid>
-
       <Grid
         sm={5}
         xs={11}
@@ -79,21 +88,21 @@ const InfoCard = props => {
         wrap="nowrap"
       >
         <Paper elevation={2} className={classes.paper}>
-          <Grid
-            container
-            item
-            justify="center"
-            style={{ border: "3px solid blue" }}
-          >
-            <Grid container item style={{ border: "3px solid blue" }}>
-              <UndrawCoding height={100} />
+          <Grid container item justify="center">
+            <Grid container style={{ padding: 20 }}>
+              <UndrawCommunity
+                primaryColor="#97EAD2"
+                height="125px"
+                name="Community"
+              />
             </Grid>
-            <Typography variant="h4">Box 2</Typography>
-            <Typography variant="body1">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.{" "}
+            <Typography className={classes.heading} variant="h4">
+              Samfunn
+            </Typography>
+            <Typography className={classes.body} variant="body1" align="center">
+              Enkelt Individet er viktig i samfunnet. Du er en del av samfunnet
+              - et samfunn som gir deg rettigheter og muligheter, men også
+              plikter.
             </Typography>
           </Grid>
         </Paper>
@@ -109,21 +118,21 @@ const InfoCard = props => {
         wrap="nowrap"
       >
         <Paper elevation={2} className={classes.paper}>
-          <Grid
-            container
-            item
-            justify="center"
-            style={{ border: "3px solid blue" }}
-          >
-            <Grid container item style={{ border: "3px solid blue" }}>
-              <UndrawCoding height={100} />
+          <Grid container item justify="center">
+            <Grid container item style={{ padding: 20 }}>
+              <UndrawTrueFriends
+                primaryColor="#97EAD2"
+                height="125px"
+                name="Childhood"
+              />
             </Grid>
-            <Typography variant="h4">Box 3</Typography>
-            <Typography variant="body1">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.{" "}
+            <Typography className={classes.heading} variant="h4">
+              Barndom
+            </Typography>
+            <Typography className={classes.body} variant="body1" align="center">
+              Vi ønsker alle det samme for våre barn. Vi vil at de skal vokse
+              opp for å elske og bli elsket. Vi vil at barna skal følge sine
+              drømmer.{" "}
             </Typography>
           </Grid>
         </Paper>

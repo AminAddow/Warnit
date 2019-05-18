@@ -1,32 +1,40 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
 
 const styles = {
-    infocard: {
-        marginTop: "10px"   
-
-    },
-  card: {
-      
+  infocard: {
+    marginTop: 50
+  },
+  cardbox: {
+    //color: "red"
   },
   bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)"
   },
   title: {
-    fontSize: 14,
+    fontSize: 14
   },
   pos: {
-    marginBottom: 12,
-  },
+    marginBottom: 12
+  }
+  /* logo: {
+    width: "auto",
+    height: 100,
+    margin: "0 auto",
+    content: `url(${Logo})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat"
+
+    //filter: 'blur(1px)',
+  } */
 };
 
 function TextCard(props) {
@@ -34,34 +42,37 @@ function TextCard(props) {
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
-    <Grid  container direction="row" justify="center" alignItems="center" className={classes.infocard} style={{border: '3px solid pink'}}>
-    <Grid item xs={11}>
-    <Card className={classes.card} >
-      <CardContent>
-        <Typography className={classes.title}  gutterBottom>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </Typography>
-      
-        <Typography className={classes.pos} >
-          adjective
-        </Typography>
-        <Typography component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    </Grid>
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      className={classes.infocard}
+    >
+      <Grid item xs={11} sm={10} className={classes.cardbox}>
+        <Card className={classes.card}>
+          <CardContent>
+            {/*<Grid item className={classes.logo} /> */}
+            <Typography
+              className={classes.title}
+              gutterBottom
+              style={{ padding: 10, fontSize: 18 }}
+            >
+              Warnit er en plattform man kan benytte dersom man mistanker
+              radikalisering. Vi som samfunnets borgere må bidra og følge med på
+              om vi står i fare. Ved hjelp av warnit spørsmålsett kan man
+              besvare spørsmål, og deretter få råd og veiledning. Warnit er en
+              del av Minos.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
     </Grid>
   );
 }
 
 TextCard.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(TextCard);

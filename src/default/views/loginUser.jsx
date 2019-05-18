@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import "./../../stylesheet/App.css";
 import firebase from "./../../firebase";
-import { Toaster, Intent } from "@blueprintjs/core";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Card from "react-bootstrap/Card";

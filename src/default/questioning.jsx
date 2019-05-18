@@ -33,7 +33,6 @@ const styles = theme => ({
 
 class Questionset extends Component {
   state = {
-    modalOpen: true,
     isLoaded: false,
     activeStep: 0,
     content: [], // contains the entire json file with questions and questionthemes
@@ -58,16 +57,6 @@ class Questionset extends Component {
       isLoaded: true
     });
   }
-
-  // handle modal event
-  handleOpen = () => {
-    this.setState({ modalOpen: true });
-  };
-
-  handleClose = () => {
-    this.setState({ modalOpen: false });
-  };
-
   handleNextTheme = () => {
     this.setState({
       // add the completed theme to the array before going to next theme
@@ -176,13 +165,8 @@ class Questionset extends Component {
   render() {
     // start by making it easier for ourselves by making code less repetetive
     const { classes } = this.props;
-    const {
-      modalOpen,
-      activeStep,
-      completedThemeQuestion,
-      themes,
-      isLoaded
-    } = this.state;
+    const { activeStep, completedThemeQuestion, themes, isLoaded } = this.state;
+    const { modalOpen, handleModalClose } = this.props;
 
     return (
       <div>
@@ -191,16 +175,10 @@ class Questionset extends Component {
             into state before proceeding to make use of it through props, this
             also avoids causing any undefined variables to pop up*/
           <div classes={classes.root}>
-            <Grid container justify="center" spacing={16}>
-              {/* instead of this button, pass a button as prop to this component */}
-              <Button onClick={this.handleOpen} justify="center">
-                open popup
-              </Button>
-            </Grid>
-            <Grid item>
+            <Grid container item>
               <Popup
                 modalOpen={modalOpen}
-                modalClose={this.handleClose}
+                modalClose={handleModalClose}
                 classPaper={classes.paper}
               >
                 <ProgressBar themes={themes} activeStep={activeStep} />
@@ -223,7 +201,7 @@ class Questionset extends Component {
           </div>
         ) : (
           <Grid container justify="center">
-            <Loader modalOpen={this.state.modalOpen} />
+            <Loader />
           </Grid>
         )}
       </div>

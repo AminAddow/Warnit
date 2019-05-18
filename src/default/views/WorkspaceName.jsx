@@ -33,7 +33,7 @@ class WorkspaceName extends Component {
       <div>
         <Card>
           <CardContent>
-            <Typography variant="title">{this.state.kommune}</Typography>
+            <Typography variant="h6">{this.state.kommune}</Typography>
           </CardContent>
         </Card>
       </div>

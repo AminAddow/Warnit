@@ -5,11 +5,10 @@ import Workspace from "./default/workspace";
 import Login from "./default/login";
 import Home from "./default/home";
 import Omoss from "./default/omoss";
-import Dokumenter from "./default/dokumenter";
+import Ressurser from "./default/ressurser";
 import Navbar from "./default/navigation/CustomNavbar";
 import firebase from "./firebase";
 import NoMatch from "./default/404";
-import Questionset from "./default/questioning";
 import Footer from "./default/footer/main-footer";
 import AdminPage from "./admin/adminpage";
 import { Grid } from "@material-ui/core";
@@ -66,32 +65,37 @@ class App extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Router>
-        <div>
-          <Navbar
-            user={this.state.uid}
-            name={this.state.displayname}
-            authenticated={this.state.authenticated}
-          />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/Omoss" component={Omoss} />
-            <Route
-              user={this.state.uid}
-              authenticated={this.state.authenticated}
-              path="/Workspace"
-              component={Workspace}
-            />
-            <Route path="/Dokumenter" component={Dokumenter} />
-            <Route path="/Questionset" component={Questionset} />
-            <Route path="/AdminPage" component={AdminPage} />
-            <Route path="/Login" component={Login} />
-            <Route component={NoMatch} />
-          </Switch>
-          <Footer />
-        </div>
-      </Router>
-
+      <div>
+        <Grid container item xs={12} className={classes.container}>
+          <Router>
+            <Grid item xs={12}>
+              <Navbar
+                user={this.state.user}
+                authenticated={this.state.authenticated}
+              />
+            </Grid>
+            <Grid item xs={12} className={classes.body}>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/Omoss" component={Omoss} />
+                <Route
+                  user={this.state.user}
+                  authenticated={this.state.authenticated}
+                  path="/Workspace"
+                  component={Workspace}
+                />
+                <Route path="/Ressurser" component={Ressurser} />
+                <Route path="/AdminPage" component={AdminPage} />
+                <Route path="/Login" component={Login} />
+                <Route component={NoMatch} />
+              </Switch>
+            </Grid>
+          </Router>
+          <Grid item xs={12}>
+            <Footer className={classes.footer} />
+          </Grid>
+        </Grid>
+      </div>
     );
   }
 }
