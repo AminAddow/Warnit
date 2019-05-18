@@ -1,81 +1,63 @@
 [
   {
     "Theme": "Interesser/ Utseende/ Symbolikk",
-    "ThemeID": 1,
     "ThemeQuestion": "På en skala (fra 0 til 10), i hvor stor grad har subjektets interesser, utseende og/eller bruk av symbolikk endret seg?",
     "Questions": [
       {
-        "ID": 1,
         "Question": "Har du observert at han/hun appellerer til og søker etter ekstremistiskmateriale på nett?"
       },
       {
-        "ID": 2,
         "Question": "Har han/hun endret klesstil/utseende?"
       },
       {
-        "ID": 3,
         "Question": "Benytter han/hun symboler som er knyttet til ekstremistiske idealer ogorganisasjoner?"
       },
       {
-        "ID": 4,
         "Question": "Har han/hun sluttet på med fritidsaktiviteter eller skole?"
       }
     ]
   },
   {
     "Theme": "Uttalelser / Ytringer",
-    "ThemeID": 2,
     "ThemeQuestion": "På en skala (fra 0 til 10), i hvor stor grad har subjektets Uttalelser / Ytringer endret seg?",
     "Questions": [
       {
-        "ID": 1,
         "Question": "Har han/hun intoleranse for andres synspunkter?"
       },
       {
-        "ID": 2,
         "Question": "Har han/hun hatretorikk?"
       },
       {
-        "ID": 3,
         "Question": "Har du observert at han/hun har Konspirasjonsteorier?"
       },
       {
-        "ID": 4,
         "Question": "Har han/hun sympati for absolutte løsninger? (som for eksempel avskaffelse av demokrati)"
       },
       {
-        "ID": 5,
         "Question": "Opplever du at han/hun legitimerer vold?"
       },
       {
-        "ID": 6,
         "Question": "Uttrykker han/hun trusler om vold for å nå politiske mål?"
       }
     ]
   },
   {
     "Theme": "Aktiviteter",
-    "ThemeID": 3,
     "ThemeQuestion": "På en skala (fra 0 til 10), i hvor stor grad har subjektets aktiviteter endret seg?",
     "Questions": [
       {
-        "ID": 1,
         "Question": "Er han/hun opptatt av ekstremisme på internett og sosiale medier?"
       },
       {
-        "ID": 2,
         "Question": "Pleier han/hun å delta på demonstrasjoner og voldelige sammenstøt med andre grupper?"
       },
       {
-        "ID": 3,
         "Question": "Bruker han/hun trusler og vold som følge av ekstremisme?"
       },
       {
-        "ID": 4,
         "Question": "Er han/hun med på hatkriminalitet?"
       },
       {
-        "ID": 5,
         "Question": "Har du observert at han/hun er med på reisevirksomhet som kan føre til økt radikalisering og har kontakt med ekstremister?"
       }
     ]
