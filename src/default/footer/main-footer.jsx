@@ -40,10 +40,7 @@ const styles = theme => ({
     padding: "5px 30px"
   },
   links: {
-    color: theme.palette.contrast.light,
-    "&$hover": {
-      color: theme.palette.primary.dark
-    }
+    color: theme.palette.primary.main
   }
 });
 
