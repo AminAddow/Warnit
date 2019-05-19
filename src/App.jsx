@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import asyncComponent from "./default/asynccomponent";
 
-import Navbar from "./default/navigation/CustomNavbar";
+
 import firebase from "./firebase";
-import Footer from "./default/footer/main-footer";
+
 import { Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import "./stylesheet/App.css";
 
+const AsyncNavbar = asyncComponent(() => import("./default/navigation/CustomNavbar"));
 const AsyncWorkspace = asyncComponent(() => import("./default/workspace"));
 const AsyncLogin = asyncComponent(() => import("./default/login"));
 const AsyncHome = asyncComponent(() => import("./default/home"));
@@ -17,6 +18,9 @@ const AsyncOmoss = asyncComponent(() => import("./default/omoss"));
 const AsyncRessurser = asyncComponent(() => import("./default/ressurser"));
 const AsyncNoMatch = asyncComponent(() => import("./default/404"));
 const AsyncAdminPage = asyncComponent(() => import("./admin/adminpage"));
+const AsyncFooter = asyncComponent(() => import("./default/footer/main-footer"));
+
+
 
 // Her kaller vi på Router som er i './components/shared/navigation/router'.
 const styles = () => ({
@@ -73,7 +77,7 @@ class App extends Component {
         <Grid container item xs={12} className={classes.container}>
           <Router>
             <Grid item xs={12}>
-              <Navbar
+              <AsyncNavbar
                 user={this.state.user}
                 authenticated={this.state.authenticated}
               />
@@ -96,7 +100,7 @@ class App extends Component {
             </Grid>
           </Router>
           <Grid item xs={12}>
-            <Footer className={classes.footer} />
+            <AsyncFooter className={classes.footer} />
           </Grid>
         </Grid>
       </div>

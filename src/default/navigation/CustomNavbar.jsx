@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import firebase from "./../../firebase";
-// import "./../../stylesheet/customnavbar.css";
+import "./../../stylesheet/customnavbar.css";
 
 export default class CustomNavbar extends Component {
   constructor(props) {
