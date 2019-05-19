@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // MUI
-import Button from "@material-ui/core/Button";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -20,11 +19,11 @@ const styles = theme => ({
     width: "100vw"
   },
   paper: {
-    margin: "10% auto",
+    margin: "10vh auto",
     width: "93%",
     maxWidth: 800,
     minHeight: "20%",
-    maxHeight: "90%",
+    maxHeight: "80vh",
     overflow: "auto",
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing.unit,
@@ -116,20 +115,20 @@ class Questionset extends Component {
       ? this.handleUpdateOnThemeCompletion()
       : // check if theme question has been completed for current step
       !this.state.completedThemeQuestion
-      ? this.setState({
+        ? this.setState({
           // need to update currentQuestionSetLength
           completedThemeQuestion: true,
           currentQuestionSetLength: this.state.content[
             this.state.completedSteps.length
           ].Questions.length
         })
-      : this.state.currentQuestion + 1 < this.state.currentQuestionSetLength
-      ? // we add 1 to currentQuestion since its starting point is 0
-        this.setState({
-          //setting next question
-          currentQuestion: this.state.currentQuestion + 1
-        })
-      : this.handleUpdateOnThemeCompletion();
+        : this.state.currentQuestion + 1 < this.state.currentQuestionSetLength
+          ? // we add 1 to currentQuestion since its starting point is 0
+          this.setState({
+            //setting next question
+            currentQuestion: this.state.currentQuestion + 1
+          })
+          : this.handleUpdateOnThemeCompletion();
   };
 
   contentQuestion = () => {
@@ -185,25 +184,25 @@ class Questionset extends Component {
                 <ProgressBar themes={themes} activeStep={activeStep} />
                 <Divider variant="middle" />
                 {// if there is no data registered, we display first theme question
-                !completedThemeQuestion && activeStep + 1 < themes.length ? (
-                  this.contentThemeQuestion()
-                ) : activeStep + 1 < themes.length ? (
-                  /* need the user to answer theme question before moving on to contentQuestions*/
+                  !completedThemeQuestion && activeStep + 1 < themes.length ? (
+                    this.contentThemeQuestion()
+                  ) : activeStep + 1 < themes.length ? (
+                    /* need the user to answer theme question before moving on to contentQuestions*/
 
-                  this.contentQuestion()
-                ) : (
-                  <ResultTable
-                    answersSubmitted={this.state.completedQuestions}
-                  />
-                )}
+                    this.contentQuestion()
+                  ) : (
+                        <ResultTable
+                          answersSubmitted={this.state.completedQuestions}
+                        />
+                      )}
               </Popup>
             </Grid>
           </div>
         ) : (
-          <Grid container justify="center">
-            <Loader />
-          </Grid>
-        )}
+            <Grid container justify="center">
+              <Loader />
+            </Grid>
+          )}
       </div>
     );
   }

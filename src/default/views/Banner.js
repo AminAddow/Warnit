@@ -1,5 +1,5 @@
 import React from "react";
-import Bannerpic from "./images/banner.JPEGXR";
+import Bannerpic from "./images/banner.jpeg";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 

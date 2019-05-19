@@ -1,19 +1,22 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./stylesheet/App.css";
-import Workspace from "./default/workspace";
-import Login from "./default/login";
-import Home from "./default/home";
-import Omoss from "./default/omoss";
-import Ressurser from "./default/ressurser";
+import asyncComponent from "./default/asynccomponent";
+
 import Navbar from "./default/navigation/CustomNavbar";
 import firebase from "./firebase";
-import NoMatch from "./default/404";
 import Footer from "./default/footer/main-footer";
-import AdminPage from "./admin/adminpage";
 import { Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
+import "./stylesheet/App.css";
+
+const AsyncWorkspace = asyncComponent(() => import("./default/workspace"));
+const AsyncLogin = asyncComponent(() => import("./default/login"));
+const AsyncHome = asyncComponent(() => import("./default/home"));
+const AsyncOmoss = asyncComponent(() => import("./default/omoss"));
+const AsyncRessurser = asyncComponent(() => import("./default/ressurser"));
+const AsyncNoMatch = asyncComponent(() => import("./default/404"));
+const AsyncAdminPage = asyncComponent(() => import("./admin/adminpage"));
 
 // Her kaller vi på Router som er i './components/shared/navigation/router'.
 const styles = () => ({
@@ -77,18 +80,18 @@ class App extends Component {
             </Grid>
             <Grid item xs={12} className={classes.body}>
               <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/Omoss" component={Omoss} />
+                <Route exact path="/" component={AsyncHome} />
+                <Route path="/Omoss" component={AsyncOmoss} />
                 <Route
                   user={this.state.user}
                   authenticated={this.state.authenticated}
                   path="/Workspace"
-                  component={Workspace}
+                  component={AsyncWorkspace}
                 />
-                <Route path="/Ressurser" component={Ressurser} />
-                <Route path="/AdminPage" component={AdminPage} />
-                <Route path="/Login" component={Login} />
-                <Route component={NoMatch} />
+                <Route path="/Ressurser" component={AsyncRessurser} />
+                <Route path="/AdminPage" component={AsyncAdminPage} />
+                <Route path="/Login" component={AsyncLogin} />
+                <Route component={AsyncNoMatch} />
               </Switch>
             </Grid>
           </Router>
