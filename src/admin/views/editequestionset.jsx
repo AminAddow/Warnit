@@ -5,6 +5,8 @@ import Popup from "./popup";
 import axios from "axios";
 import NewEditableQuestion from "./neweditablequestion";
 import Loader from "./../../default/views/loader";
+const jsonfile = require("jsonfile");
+
 const styles = theme => ({
   dispTypo: {
     fontSize: 16,
@@ -26,7 +28,10 @@ class EditQuestionset extends Component {
     currentTheme: 0,
     currentQuestion: 0,
     questionsLoaded: false,
-    themeLoaded: false
+    themeLoaded: false,
+    headingLoaded: false,
+    counter: 0,
+    updatedJSON: []
   };
 
   async componentDidMount() {
@@ -50,7 +55,8 @@ class EditQuestionset extends Component {
       questionset,
       arrayQuestions,
       questionsLoaded,
-      themeLoaded
+      themeLoaded,
+      headingLoaded
     } = this.state;
 
     /* loop over the questionset and for each theme print out 
@@ -60,12 +66,19 @@ class EditQuestionset extends Component {
     let subquestions = [];
 
     questionset[currentTheme].Questions.map(item => {
-      subquestions = subquestions.concat(item.Question + ";-- Normal");
+      subquestions = subquestions.concat(item.Question + ";-- Normal spørsmål");
     });
-    !themeLoaded
+    !headingLoaded
       ? this.setState({
           arrayQuestions: arrayQuestions.concat(
-            questionset[currentTheme].ThemeQuestion + ";-- Tema"
+            questionset[currentTheme].Theme + ";-- Tema overskrift"
+          ),
+          headingLoaded: true
+        })
+      : !themeLoaded
+      ? this.setState({
+          arrayQuestions: arrayQuestions.concat(
+            questionset[currentTheme].ThemeQuestion + ";-- Tema spørsmål"
           ),
           themeLoaded: true
         })
@@ -79,16 +92,42 @@ class EditQuestionset extends Component {
           currentTheme: currentTheme + 1,
           numberOfQuestions: questionset[currentTheme].Questions.length,
           questionsLoaded: false,
-          themeLoaded: false
+          themeLoaded: false,
+          headingLoaded: false
         });
   };
-  loadSubQuestion = question => (
-    <NewEditableQuestion
-      id={"themeid-" + this.state.currentTheme}
-      questionType={"Normal spørsmål"}
-      defaultVal={question}
-    />
-  );
+
+  handleButtonClickSave = () => {
+    const childnodes = document.querySelector("#QuestionSet").childNodes;
+    //console.log(childnodes);
+    //let updatedJSON = [];
+    let myJSON = [];
+    let counter = 0;
+    for (let i = 0; i < childnodes.length; i++) {
+      let type = childnodes[i].innerText; // this only gets the old value not the new
+      let textContent = childnodes[i].title;
+      console.log("updatedJSON " + this.state.updatedJSON.length);
+      type === "Tema overskrift"
+        ? myJSON.length === 0
+          ? myJSON.push("{'Theme':'" + textContent + "',")
+          : myJSON.push("]}, {'Theme':'" + textContent + "',")
+        : type === "Tema spørsmål"
+        ? myJSON.push("'ThemeQuestion':'" + textContent + "',")
+        : counter === 2
+        ? myJSON.push("Questions:[{'Question':'" + textContent + "', ")
+        : myJSON.push("'Question':'" + textContent + "'");
+
+      counter = counter + 1;
+      if (counter == 7) counter = 0;
+
+      //console.log("inner texttttt " + i + "-- " + type);
+      //console.log("VALLLUEEEE -- " + textContent);
+      //type == "Tema overskrift"
+      // type == "Tema spørmsål"
+    }
+    console.log(myJSON);
+  };
+
   render() {
     const {
       modalOpen,
@@ -121,22 +160,26 @@ class EditQuestionset extends Component {
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  {arrayQuestions.map(item => {
-                    let data = item.split(";--");
-                    let type = data[1]; // type of question
-                    let questionValue = data[0]; // value
-                    //console.log("type " + type);
-                    //console.log("value " + questionValue);
+                  <div id="QuestionSet">
+                    {arrayQuestions.map(item => {
+                      let data = item.split(";--");
+                      //console.log("data " + data);
+                      let type = data[1]; // type of question
+                      let questionValue = data[0]; // value
 
-                    return (
-                      <NewEditableQuestion
-                        id={"themeid-" + this.state.currentTheme}
-                        questionType={type}
-                        type={type}
-                        defaultVal={questionValue}
-                      />
-                    );
-                  })}
+                      //console.log("type " + type);
+                      //console.log("theme " + tema);
+                      //console.log("value " + questionValue);
+
+                      return (
+                        <NewEditableQuestion
+                          questionType={type}
+                          type={type}
+                          defaultVal={questionValue}
+                        />
+                      );
+                    })}
+                  </div>
                 </Grid>
                 <Grid
                   container
@@ -148,11 +191,12 @@ class EditQuestionset extends Component {
                   className={classes.button}
                 >
                   <Button
-                    color="primary"
+                    color="inherit"
                     variant="outlined"
                     size="large"
                     jusify="center"
                     fullWidth
+                    onClick={this.handleButtonClickSave}
                   >
                     Lagre endringer
                   </Button>

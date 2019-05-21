@@ -45,7 +45,7 @@ const styles = theme => ({
     margin: "10vh auto",
     minHeight: "20vh",
     maxHeight: "70vh",
-    overflow: "auto"
+    overflowX: "hidden"
   },
   gridCon: {
     margin: "0 auto",
