@@ -106,16 +106,15 @@ class EditQuestionset extends Component {
     for (let i = 0; i < childnodes.length; i++) {
       let type = childnodes[i].innerText; // this only gets the old value not the new
       let textContent = childnodes[i].title;
-      console.log("updatedJSON " + this.state.updatedJSON.length);
       type === "Tema overskrift"
-        ? myJSON.length === 0
-          ? myJSON.push("{'Theme':'" + textContent + "',")
-          : myJSON.push("]}, {'Theme':'" + textContent + "',")
+        ? myJSON.push("{Theme:" + textContent + ",")
         : type === "Tema spørsmål"
-        ? myJSON.push("'ThemeQuestion':'" + textContent + "',")
+        ? myJSON.push("ThemeQuestion:" + textContent + ",")
         : counter === 2
-        ? myJSON.push("Questions:[{'Question':'" + textContent + "', ")
-        : myJSON.push("'Question':'" + textContent + "'");
+        ? myJSON.push("Questions:[{Question:" + textContent + ",")
+        : counter === 6
+        ? myJSON.push("Question:" + textContent + "]}")
+        : myJSON.push("Question:" + textContent + "'");
 
       counter = counter + 1;
       if (counter == 7) counter = 0;
@@ -125,6 +124,8 @@ class EditQuestionset extends Component {
       //type == "Tema overskrift"
       // type == "Tema spørmsål"
     }
+    console.log("updatedJSON " + myJSON);
+
     console.log(myJSON);
   };
 
