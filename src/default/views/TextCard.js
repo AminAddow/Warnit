@@ -39,7 +39,6 @@ const styles = {
 
 function TextCard(props) {
   const { classes } = props;
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Grid

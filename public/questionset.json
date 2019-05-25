@@ -10,10 +10,13 @@
         "Question": "Har han/hun endret klesstil/utseende?"
       },
       {
-        "Question": "Benytter han/hun symboler som er knyttet til ekstremistiske idealer ogorganisasjoner?"
+        "Question": "Benytter han/hun symboler som er knyttet til ekstremistiske idealer og organisasjoner?"
       },
       {
         "Question": "Har han/hun sluttet på med fritidsaktiviteter eller skole?"
+      },
+      {
+        "Question": "Uttrykker han/hun trusler om vold for å nå politiske mål?"
       }
     ]
   },
@@ -35,9 +38,6 @@
       },
       {
         "Question": "Opplever du at han/hun legitimerer vold?"
-      },
-      {
-        "Question": "Uttrykker han/hun trusler om vold for å nå politiske mål?"
       }
     ]
   },

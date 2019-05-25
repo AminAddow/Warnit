@@ -15,15 +15,15 @@ const NewEditableQuestion = props => {
   const { classes } = props;
   return (
     <TextField
-      id={props.id}
-      label={props.type + " spørsmål"}
+      label={props.type}
       style={{ margin: 8 }}
-      placeholder={props.questionType + " spørsmål"}
+      placeholder={props.defaultVal}
       multiline
       defaultValue={props.defaultVal}
-      //helperText="Full width!"
+      //helperText={"omhandler " + props.theme}
       fullWidth
       margin="normal"
+      title={props.defaultVal}
       InputLabelProps={{
         shrink: true
       }}

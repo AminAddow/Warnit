@@ -32,7 +32,7 @@ const styles = {
   },
   cardcontent: {
     minHeight: 200,
-    height: "auto",
+    height: 400,
     width: "auto"
   },
   test: {
@@ -76,6 +76,7 @@ class Ressurser extends Component {
           <Grid item xs={12} md={6} lg={4}>
             <Card className={classes.cardcontent}>
               <CardContent>
+
                 <Grid item container xs={12} spacing={8} justify="center">
                   <Grid item xs={12}>
                     <Typography variant="h5">
@@ -98,7 +99,6 @@ class Ressurser extends Component {
                         />
                       </Link>
                     </Grid>
-
                     <Grid item xs={6}>
                       <Link
                         href="https://lovdata.no/sok?q=radikalisering"
@@ -172,7 +172,7 @@ class Ressurser extends Component {
                         target="_blank"
                       >
                         <Typography variant="body1" className={classes.link}>
-                          Link til veileder som PDF.
+                          Link til PDF veileder.
                         </Typography>
                       </Link>
                     </Grid>
