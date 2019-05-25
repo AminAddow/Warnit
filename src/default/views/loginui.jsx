@@ -111,6 +111,7 @@ class Loginui extends Component {
                 onChange={this.handleChange}
                 value={this.state.email}
                 variant="outlined"
+                autoFocus
               />
               {/* <FormControl type="email" name="email" placeholder="Epost" checked={this.state.email} onChange={this.handleChange} /> */}
               <TextField

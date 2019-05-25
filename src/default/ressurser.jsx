@@ -106,7 +106,7 @@ class Ressurser extends Component {
                         target="_blank"
                       >
                         <Typography variant="body1" className={classes.link}>
-                          Link til lovdata.no .
+                          Link til lovdata.no.
                         </Typography>
                       </Link>
                     </Grid>

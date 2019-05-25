@@ -115,6 +115,7 @@ class LoginUser extends Component {
                   placeholder="Epost"
                   checked={this.state.email}
                   onChange={this.handleChange}
+                  autoFocus
                 />
               </Form.Group>
               <Form.Group controlId="formBasicPassword">
